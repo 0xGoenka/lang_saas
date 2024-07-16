@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: local("PlusJakartaSans"), url("PlusJakartaSans.ttf") format("truetype");
+}
+
+html {
+  font-family: PlusJakartaSans, sans-serif;
+}
+
+.buttonPrimary {
+  background: linear-gradient(
+    88.52deg,
+    #4094d1 0.59%,
+    #7278df 87.59%,
+    #78bce7 137.27%
+  );
+}
