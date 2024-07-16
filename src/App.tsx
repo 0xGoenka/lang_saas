@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import YouTube, { YouTubeProps } from "react-youtube";
 import { CaptionService } from "./caption.service";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from "./components/Button";
+import { Navigator } from "./Navigator";
+import { ServicesProvider } from "./services/Services";
+import { AppContainer } from "./components/AppContainer";
 
 function youtube_parser(url: string) {
   const regExp =
@@ -16,39 +14,36 @@ function youtube_parser(url: string) {
 }
 
 function App() {
-  const [url, setUrl] = useState("https://www.youtube.com/watch?v=nr8biZfSZ3Y");
-  const [id, setID] = useState("");
+  // const [url, setUrl] = useState("https://www.youtube.com/watch?v=nr8biZfSZ3Y");
+  // const [id, setID] = useState("");
 
-  useEffect(() => {
-    const id = youtube_parser(url);
-    console.log({ url, id });
-    if (id) {
-      setID(id);
-    }
-  }, [url]);
+  // useEffect(() => {
+  //   const id = youtube_parser(url);
+  //   console.log({ url, id });
+  //   if (id) {
+  //     setID(id);
+  //   }
+  // }, [url]);
 
-  if (id) {
-    return (
-      <div className="h-full w-full zindex-[100] border-3 bg-dark h-screen">
-        <YouTube
-          videoId={id}
-          onReady={onPlayerReady}
-          onStateChange={onStateChange}
-        />
-        <PrimaryButton
-          onClick={() => new CaptionService().downloadSubs("en", url)}
-        >
-          Download Subtitles
-        </PrimaryButton>
-        <SecondaryButton onClick={() => setID("")}>Back</SecondaryButton>
-        <TertiaryButton onClick={() => setID("")}>Too hard</TertiaryButton>
-        <TertiaryButton onClick={() => setID("")}>
-          Too hard
-          <div className="text-xs font-normal">Will reapear in 1min</div>
-        </TertiaryButton>
-      </div>
-    );
-  }
+  // if (id) {
+  //   return (
+  //     <div className="h-full w-full zindex-[100] border-3 bg-dark h-screen">
+  //       <YouTube
+  //         videoId={id}
+  //         onReady={onPlayerReady}
+  //         onStateChange={onStateChange}
+  //       />
+  //     </div>
+  //   );
+  // }
+
+  return (
+    <AppContainer>
+      <ServicesProvider>
+        <Navigator />
+      </ServicesProvider>
+    </AppContainer>
+  );
 
   return (
     <>
