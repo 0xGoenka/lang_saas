@@ -1,4 +1,3 @@
-import "./App.css";
 import { Navigator } from "./Navigator";
 import { ServicesProvider } from "./services/Services";
 import { AppContainer } from "./components/AppContainer";

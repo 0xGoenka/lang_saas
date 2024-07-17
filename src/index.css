@@ -20,3 +20,8 @@ html {
     #78bce7 137.27%
   );
 }
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
