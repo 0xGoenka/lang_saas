@@ -6,6 +6,7 @@ import { E_EVENT } from "../constants/event";
 
 export class PlayerService {
   player: YouTubePlayer | null = null;
+  isPlaying = observable(false);
   parser = new WebVTTParser();
   extrait = 0;
   srt_array: VTTData | undefined = undefined;
@@ -27,8 +28,10 @@ export class PlayerService {
     if (!this.player) throw Error("Player not ready");
     if (!currentSub) throw Error("Subtitles not ready");
 
+    this.isPlaying.set(true);
     this.player.playVideo();
-    // this.player.seekTo(currentSub.startTime, true);
+
+    this.player.seekTo(currentSub.startTime, true);
     this.extrait++;
   };
 
@@ -41,7 +44,8 @@ export class PlayerService {
       setTimeout(() => {
         console.log("pauseVideo");
         this.player.pauseVideo();
-        window.dispatchEvent(new Event("display_subtitle"));
+        E_EVENT.display_subtitle.dispatch();
+        this.isPlaying.set(false);
       }, (current_srt.endTime - current_srt.startTime) * 1000);
     }
   };

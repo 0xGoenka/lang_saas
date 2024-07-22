@@ -30,7 +30,7 @@ export const SecondaryButton = ({ children, onClick }: ButtonProps) => {
 export const TertiaryButton = ({ children, onClick }: ButtonProps) => {
   return (
     <button
-      className="bg-dark hover:bg-blue-700  text-lightGrey text-base
+      className="focus:bg-white focus:text-dark bg-dark  text-lightGrey text-base
             font-bold px-3 py-6 rounded-lg border border-x-lightGrey box-border w-[151px]"
       onClick={onClick}
     >

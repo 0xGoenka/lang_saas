@@ -3,29 +3,27 @@ import { useServices } from "../../services/Services";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { PrimaryButton } from "../../components/Button";
+import { E_EVENT } from "../../constants/event";
+import { useObservable } from "micro-observables";
 
 const id = "Ye8mB6VsUHw";
 
 export const Video = () => {
   const { playerService } = useServices();
+  const isPlaying = useObservable(playerService.isPlaying);
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.addEventListener("display_subtitle", () => {
-      console.log("display_subtitle");
-      navigate("/playagain");
-    });
-
+    E_EVENT.display_subtitle.add(navigate);
     return () => {
-      window.removeEventListener("display_subtitle", () => {});
+      E_EVENT.display_subtitle.remove();
     };
   }, [navigate]);
 
   return (
-    <div>
-      <div className="relative justify-center content-center h-screen">
-        <div className="youtube-video z-10000 border-2 border-green bg-transparent absolute"></div>
-        {/* <video className="w-full h-full" src="/Ye8mB6VsUHw.mp4" /> */}
+    <div className="relative justify-center content-center h-screen ">
+      <div className="mb-[16px]">
+        <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div>
         <YouTube
           opts={opts}
           videoId={id}
@@ -35,9 +33,11 @@ export const Video = () => {
           iframeClassName="youtube-video"
         />
       </div>
-      <PrimaryButton onClick={() => playerService.playVideoAt()}>
-        Play
-      </PrimaryButton>
+      {!isPlaying && (
+        <PrimaryButton onClick={() => playerService.playVideoAt()}>
+          Play
+        </PrimaryButton>
+      )}
     </div>
   );
 };
