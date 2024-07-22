@@ -2,16 +2,13 @@ import YouTube from "react-youtube";
 import { useServices } from "../../services/Services";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { PrimaryButton } from "../../components/Button";
 import { E_EVENT } from "../../constants/event";
-import { useObservable } from "micro-observables";
 import { Header } from "../../components/Header";
 
 const id = "Ye8mB6VsUHw";
 
 export const Video = () => {
   const { playerService } = useServices();
-  const isPlaying = useObservable(playerService.isPlaying);
   const navigate = useNavigate();
 
   useEffect(() => {
