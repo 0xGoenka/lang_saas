@@ -88,4 +88,8 @@ export class DBService {
     console.log("getSubtitlesWithDifficulty", difficulty, subtitles);
     return subtitles;
   };
+
+  updateSubtitleDifficulty = async (id: number, difficulty: E_Difficulty) => {
+    await db.subtitles.update(id, { difficulty });
+  };
 }

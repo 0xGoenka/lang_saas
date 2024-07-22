@@ -7,6 +7,7 @@ import { E_Difficulty } from "../../constants/contants";
 export const Feedback = () => {
   const { playerService, engineService } = useServices();
   const subtitle = useObservable(playerService.currentSub);
+  const subtitleId = useObservable(playerService.currentSubId);
   const navigate = useNavigate();
 
   console.log("Feedback subtitle", subtitle);
@@ -19,7 +20,11 @@ export const Feedback = () => {
           <span className="mr-[8px]">
             <TertiaryButton
               onClick={() => {
-                engineService.answerQuestion(E_Difficulty.TOO_HARD, navigate);
+                engineService.answerQuestion(
+                  subtitleId,
+                  E_Difficulty.TOO_HARD,
+                  navigate
+                );
               }}
             >
               Too hard
@@ -30,7 +35,11 @@ export const Feedback = () => {
           </span>
           <TertiaryButton
             onClick={() => {
-              engineService.answerQuestion(E_Difficulty.HARD, navigate);
+              engineService.answerQuestion(
+                subtitleId,
+                E_Difficulty.HARD,
+                navigate
+              );
             }}
           >
             Hard
@@ -42,7 +51,11 @@ export const Feedback = () => {
           <span className="mr-[8px]">
             <TertiaryButton
               onClick={() => {
-                engineService.answerQuestion(E_Difficulty.OK, navigate);
+                engineService.answerQuestion(
+                  subtitleId,
+                  E_Difficulty.OK,
+                  navigate
+                );
               }}
             >
               Ok
@@ -51,7 +64,11 @@ export const Feedback = () => {
           </span>
           <TertiaryButton
             onClick={() => {
-              engineService.answerQuestion(E_Difficulty.EASY, navigate);
+              engineService.answerQuestion(
+                subtitleId,
+                E_Difficulty.EASY,
+                navigate
+              );
             }}
           >
             Easy

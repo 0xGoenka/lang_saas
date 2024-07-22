@@ -12,6 +12,7 @@ export class PlayerService {
   parser = new WebVTTParser();
   extrait = 0;
   currentSub: WritableObservable<Cue | null> = observable(null);
+  currentSubId: WritableObservable<number | null> = observable(null);
 
   constructor(engineService: EngineService) {
     this.engineService = engineService;
@@ -21,6 +22,7 @@ export class PlayerService {
     const currSub = await this.engineService.buildQuestionQueue("Ye8mB6VsUHw");
     if (!currSub) throw Error("No subtitle to play");
     console.log("getSubtitleToPlay", currSub[0].subtitle);
+    this.currentSubId.set(currSub[0].id);
     this.currentSub.set(currSub[0].subtitle);
   }
 

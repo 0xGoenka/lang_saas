@@ -9,17 +9,13 @@ export class EngineService {
     this.dbService = dbService;
   }
 
-  answerQuestion = (difficulty: E_Difficulty, navigate: NavigateFunction) => {
-    switch (difficulty) {
-      case E_Difficulty.EASY:
-        break;
-      case E_Difficulty.OK:
-        break;
-      case E_Difficulty.HARD:
-        break;
-      case E_Difficulty.TOO_HARD:
-        break;
-    }
+  answerQuestion = (
+    subtitleId: number | null,
+    difficulty: E_Difficulty,
+    navigate: NavigateFunction
+  ) => {
+    if (!subtitleId) throw Error("No subtitleId");
+    this.updateDifficulty(subtitleId, difficulty);
     navigate("/");
   };
 
@@ -63,5 +59,12 @@ export class EngineService {
 
     shuffleArray(questionQueue);
     return questionQueue;
+  };
+
+  updateDifficulty = async (subtitle_id: number, difficulty: E_Difficulty) => {
+    return await this.dbService.updateSubtitleDifficulty(
+      subtitle_id,
+      difficulty
+    );
   };
 }
