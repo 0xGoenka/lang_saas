@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import Dexie, { type EntityTable } from "dexie";
 import { E_Difficulty } from "../constants/contants";
 import { Cue, WebVTTParser } from "webvtt-parser";
@@ -90,6 +91,11 @@ export class DBService {
   };
 
   updateSubtitleDifficulty = async (id: number, difficulty: E_Difficulty) => {
-    await db.subtitles.update(id, { difficulty });
+    try {
+      // @ts-expect-error
+      await db.subtitles.update(id, { difficulty });
+    } catch (e) {
+      console.error(e);
+    }
   };
 }

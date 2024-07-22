@@ -32,7 +32,7 @@ export const Video = () => {
             videoId={id}
             onReady={playerService.onPlayerReady}
             onStateChange={playerService.onStateChange}
-            onError={(e) => console.error("Error", e)}
+            onError={(e: unknown) => console.error("Error", e)}
             iframeClassName="youtube-video"
           />
         </div>
