@@ -9,14 +9,15 @@ export class EngineService {
     this.dbService = dbService;
   }
 
-  answerQuestion = (
+  answerQuestion = async (
     subtitleId: number | null,
     difficulty: E_Difficulty,
     navigate: NavigateFunction
   ) => {
     if (!subtitleId) throw Error("No subtitleId");
     this.updateDifficulty(subtitleId, difficulty);
-    navigate("/");
+    const videoId = await this.dbService.getVideoIdFromSubtitle(subtitleId);
+    navigate("/video/" + videoId);
   };
 
   getQuestion = async (video_id: string, difficulty: E_Difficulty) => {

@@ -10,11 +10,10 @@ export const PlayAgain = () => {
 
   return (
     <div className="relative flex flex-col h-screen justify-between">
-      <Header text="Library" />
+      <Header text="Library" onClick={() => navigate("/")} />
       <div
         onClick={() => {
-          playerService.playAgain();
-          navigate("/");
+          playerService.playAgain(navigate);
         }}
         className="cursor-pointer flex flex-col align-center justify-center w-full items-center"
       >

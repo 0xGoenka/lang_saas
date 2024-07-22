@@ -8,10 +8,10 @@ export const Navigator = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" Component={Video} />
+        <Route path="/video/:video_id" Component={Video} />
         <Route path="/feedback" Component={Feedback} />
         <Route path="/playagain" Component={PlayAgain} />
-        <Route path="/library" Component={Library} />
+        <Route path="/" Component={Library} />
       </Routes>
     </BrowserRouter>
   );

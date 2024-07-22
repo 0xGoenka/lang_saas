@@ -15,7 +15,7 @@ export const Feedback = () => {
 
   return (
     <div className="relative flex flex-col h-screen justify-between">
-      <Header text="Library" />
+      <Header text="Library" onClick={() => navigate("/")} />
       <div className="text-white text-center">{subtitle?.text}</div>
       <div className="justify-center items-center flex mb-[50px]">
         <div className="justify-evenly">

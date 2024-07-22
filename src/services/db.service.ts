@@ -18,7 +18,7 @@ export interface Subtitle {
   difficulty: string;
 }
 
-const db = new Dexie("database") as Dexie & {
+export const db = new Dexie("database") as Dexie & {
   videos: EntityTable<
     Video,
     "id" // primary key "id" (for the typings only)
@@ -64,6 +64,12 @@ export class DBService {
 
   getVideos = async () => {
     return await db.videos.toArray();
+  };
+
+  getVideoIdFromSubtitle = async (subtitle_id: number) => {
+    const subtitle = await db.subtitles.get({ id: subtitle_id });
+    if (!subtitle) return null;
+    return subtitle.video_id;
   };
 
   getSubtitles = async (video_id: string) => {

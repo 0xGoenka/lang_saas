@@ -3,6 +3,7 @@ import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
 import { WebVTTParser, Cue } from "webvtt-parser";
 import { observable, WritableObservable } from "micro-observables";
 import { E_EVENT } from "../constants/event";
+import { NavigateFunction } from "react-router-dom";
 
 export class PlayerService {
   engineService: EngineService;
@@ -13,20 +14,23 @@ export class PlayerService {
   currentSub: WritableObservable<Cue | null> = observable(null);
   currentSubId: WritableObservable<number | null> = observable(null);
   isPlayingAgain = observable(false);
+  videoId: string | undefined = undefined;
 
   constructor(engineService: EngineService) {
     this.engineService = engineService;
   }
 
   async getSubtitleToPlay() {
-    const currSub = await this.engineService.buildQuestionQueue("Ye8mB6VsUHw");
+    if (!this.videoId) throw Error("No video id");
+    const currSub = await this.engineService.buildQuestionQueue(this.videoId);
     if (!currSub) throw Error("No subtitle to play");
     this.currentSubId.set(currSub[0].id);
     this.currentSub.set(currSub[0].subtitle);
   }
 
-  async playAgain() {
+  async playAgain(navigate: NavigateFunction) {
     this.isPlayingAgain.set(true);
+    navigate("/video/" + this.videoId);
   }
 
   async playVideoAt() {
@@ -42,6 +46,7 @@ export class PlayerService {
   }
 
   onStateChange: YouTubeProps["onStateChange"] = async (event) => {
+    console.log({ event });
     // access to player in all event handlers via event.target
     if (event.data === YouTube.PlayerState.PLAYING) {
       console.log("PLAYING");
