@@ -3,9 +3,9 @@ import { PlayerService } from "./player.service";
 import { EngineService } from "./engine.service";
 import { DBService } from "./db.service";
 
-const playerService = new PlayerService();
 const dbService = new DBService();
 const engineService = new EngineService(dbService);
+const playerService = new PlayerService(engineService);
 
 export const services = {
   playerService,

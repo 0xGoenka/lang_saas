@@ -23,7 +23,7 @@ export const Video = () => {
   return (
     <div className="relative justify-center content-center h-screen ">
       <div className="mb-[16px]">
-        <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div>
+        {/* <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div> */}
         <YouTube
           opts={opts}
           videoId={id}
@@ -45,7 +45,7 @@ export const Video = () => {
 const opts = {
   playerVars: {
     // https://developers.google.com/youtube/player_parameters
-    controls: 0, // dont show control
+    // controls: 0, // dont show control
     disablekb: 1, // disable keyboard
     iv_load_policy: 3, // disable annotations
   },

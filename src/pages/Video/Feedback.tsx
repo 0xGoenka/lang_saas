@@ -9,6 +9,8 @@ export const Feedback = () => {
   const subtitle = useObservable(playerService.currentSub);
   const navigate = useNavigate();
 
+  console.log("Feedback subtitle", subtitle);
+
   return (
     <div>
       <div className="text-white">{subtitle?.text}</div>

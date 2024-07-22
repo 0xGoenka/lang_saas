@@ -3,14 +3,14 @@ import { E_Difficulty } from "../constants/contants";
 import { Cue, WebVTTParser } from "webvtt-parser";
 import { cookieSubtitles } from "../subtitles/cookie";
 
-interface Video {
+export interface Video {
   id: number;
   video_id: string;
   name: string;
   url: string;
 }
 
-interface Subtitle {
+export interface Subtitle {
   id: number;
   video_id: string;
   subtitle: Cue;
@@ -57,13 +57,9 @@ db.subtitles.count().then((count) => {
     db.subtitles.bulkAdd(formatedCues);
   }
 });
-export type { Video };
 
 export class DBService {
-  constructor() {
-    this.getSubtitlesWithDifficulty("Ye8mB6VsUHw", E_Difficulty.TOO_HARD);
-    this.getSubtitlesWithDifficulty("Ye8mB6VsUHw", E_Difficulty.HARD);
-  }
+  constructor() {}
 
   getVideos = async () => {
     return await db.videos.toArray();
