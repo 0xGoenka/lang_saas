@@ -37,8 +37,8 @@ export class PlayerService {
     if (!this.player) throw Error("Player not ready");
     if (!currentSub) throw Error("Subtitles not ready");
 
-    this.isPlaying.set(true);
     this.player.playVideo();
+    this.isPlaying.set(true);
 
     this.player.seekTo(currentSub.startTime, true);
     this.extrait++;
