@@ -11,7 +11,6 @@ export class PlayerService {
   player: YouTubePlayer | null = null;
   isPlaying = observable(false);
   parser = new WebVTTParser();
-  extrait = 0;
   currentSub: WritableObservable<Cue | null> = observable(null);
   currentSubId: WritableObservable<number | null> = observable(null);
   isPlayingAgain = observable(false);
@@ -41,12 +40,10 @@ export class PlayerService {
     this.isPlaying.set(true);
 
     this.player.seekTo(currentSub.startTime, true);
-    this.extrait++;
   }
 
   onStateChange: YouTubeProps["onStateChange"] = (event) => {
     // access to player in all event handlers via event.target
-    console.log("onStateChange", event.data, new Date().getTime());
     if (event.data === YouTube.PlayerState.PLAYING) {
       const currentSub = this.currentSub.get();
       if (!currentSub) throw Error("Subtitles not ready");

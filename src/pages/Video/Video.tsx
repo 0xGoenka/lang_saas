@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { PrimaryButton } from "../../components/Button";
 import { E_EVENT } from "../../constants/event";
 import { useObservable } from "micro-observables";
+import { Header } from "../../components/Header";
 
 const id = "Ye8mB6VsUHw";
 
@@ -21,22 +22,29 @@ export const Video = () => {
   }, [navigate]);
 
   return (
-    <div className="relative justify-center content-center h-screen ">
-      <div className="mb-[16px]">
-        {/* <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div> */}
-        <YouTube
-          opts={opts}
-          videoId={id}
-          onReady={playerService.onPlayerReady}
-          onStateChange={playerService.onStateChange}
-          onError={(e) => console.error("Error", e)}
-          iframeClassName="youtube-video"
-        />
+    <div className="relative flex flex-col h-screen justify-between">
+      <Header text="Library" />
+      <div className="relative justify-center content-center">
+        <div className="mb-[16px]">
+          {/* <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div> */}
+          <YouTube
+            opts={opts}
+            videoId={id}
+            onReady={playerService.onPlayerReady}
+            onStateChange={playerService.onStateChange}
+            onError={(e) => console.error("Error", e)}
+            iframeClassName="youtube-video"
+          />
+        </div>
       </div>
-      {!isPlaying && (
-        <PrimaryButton onClick={() => playerService.playVideoAt()}>
-          Play
-        </PrimaryButton>
+      {!isPlaying ? (
+        <div className="mb-[50px] w-full">
+          <PrimaryButton onClick={() => playerService.playVideoAt()}>
+            Play
+          </PrimaryButton>
+        </div>
+      ) : (
+        <div className="h-[106px]"></div>
       )}
     </div>
   );
