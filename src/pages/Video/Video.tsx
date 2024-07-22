@@ -37,15 +37,7 @@ export const Video = () => {
           />
         </div>
       </div>
-      {!isPlaying ? (
-        <div className="mb-[50px] w-full">
-          <PrimaryButton onClick={() => playerService.playVideoAt()}>
-            Play
-          </PrimaryButton>
-        </div>
-      ) : (
-        <div className="h-[106px]"></div>
-      )}
+      <div className="h-[1px]"></div>
     </div>
   );
 };

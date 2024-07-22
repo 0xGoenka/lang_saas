@@ -30,6 +30,7 @@ export class PlayerService {
   }
 
   async playVideoAt() {
+    if (this.isPlaying.get()) return;
     if (!this.isPlayingAgain.get()) await this.getSubtitleToPlay();
     const currentSub = this.currentSub.get();
     if (!this.player) throw Error("Player not ready");
@@ -37,13 +38,14 @@ export class PlayerService {
 
     this.player.playVideo();
     this.isPlaying.set(true);
-
     this.player.seekTo(currentSub.startTime, true);
   }
 
-  onStateChange: YouTubeProps["onStateChange"] = (event) => {
+  onStateChange: YouTubeProps["onStateChange"] = async (event) => {
     // access to player in all event handlers via event.target
     if (event.data === YouTube.PlayerState.PLAYING) {
+      console.log("PLAYING");
+      await this.playVideoAt();
       const currentSub = this.currentSub.get();
       if (!currentSub) throw Error("Subtitles not ready");
       setTimeout(() => {

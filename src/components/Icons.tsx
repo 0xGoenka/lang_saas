@@ -24,7 +24,7 @@ export const CloseIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_64_869)">
+      <g clipPath="url(#clip0_64_869)">
         <path
           d="M25.3333 8.54663L23.4533 6.66663L16 14.12L8.54666 6.66663L6.66666 8.54663L14.12 16L6.66666 23.4533L8.54666 25.3333L16 17.88L23.4533 25.3333L25.3333 23.4533L17.88 16L25.3333 8.54663Z"
           fill="#E6E7E8"
@@ -48,7 +48,7 @@ export const BackIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_64_864)">
+      <g clipPath="url(#clip0_64_864)">
         <path
           d="M26.6667 14.6667H10.44L17.8933 7.21337L16 5.33337L5.33333 16L16 26.6667L17.88 24.7867L10.44 17.3334H26.6667V14.6667Z"
           fill="#E6E7E8"
@@ -87,7 +87,7 @@ export const UserIcon = () => {
   );
 };
 
-export const LibraryIcon = () => {
+export const LibraryIcon = ({ fill }: { fill: string }) => {
   return (
     <svg
       width="32"
@@ -99,7 +99,7 @@ export const LibraryIcon = () => {
       <g clip-path="url(#clip0_64_858)">
         <path
           d="M26.6667 10.6666H5.33333V7.99996H26.6667V10.6666ZM24 2.66663H8V5.33329H24V2.66663ZM29.3333 16V26.6666C29.3333 28.1333 28.1333 29.3333 26.6667 29.3333H5.33333C3.86666 29.3333 2.66666 28.1333 2.66666 26.6666V16C2.66666 14.5333 3.86666 13.3333 5.33333 13.3333H26.6667C28.1333 13.3333 29.3333 14.5333 29.3333 16ZM21.3333 21.3333L13.3333 16.9733V25.68L21.3333 21.3333Z"
-          fill="#E6E7E8"
+          fill={fill}
         />
       </g>
       <defs>
