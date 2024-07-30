@@ -23,13 +23,13 @@ export const Library = () => {
         </div>
       </div>
       <div>
-        <PrimaryButton
+        {/* <PrimaryButton
           onClick={() => {
             navigate("/add_video");
           }}
         >
           Add a video
-        </PrimaryButton>
+        </PrimaryButton> */}
         <Footer />
       </div>
     </div>
