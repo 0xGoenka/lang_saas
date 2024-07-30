@@ -1,5 +1,5 @@
 import { useLiveQuery } from "dexie-react-hooks";
-import { PrimaryButton } from "../../components/Button";
+// import { PrimaryButton } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Loader } from "../../components/Loader";
 import { db, Video } from "../../services/db.service";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Library = () => {
   const videos = useLiveQuery(() => db.videos.toArray());
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   console.log("videos", videos);
   return (
