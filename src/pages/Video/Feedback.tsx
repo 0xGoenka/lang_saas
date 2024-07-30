@@ -8,8 +8,6 @@ import { Rating } from "ts-fsrs";
 
 export const Feedback = () => {
   const { fsrsService } = useServices();
-  // const subtitle = useObservable(playerService.currentSub);
-  // const subtitleId = useObservable(playerService.currentSubId);
   const cardToReview = useObservable(fsrsService.cardToReview);
   const navigate = useNavigate();
 
@@ -30,6 +28,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Again);
+                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Too hard
@@ -42,6 +41,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Hard);
+                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Hard
@@ -54,6 +54,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Good);
+                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Ok
@@ -64,6 +65,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Easy);
+                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Easy

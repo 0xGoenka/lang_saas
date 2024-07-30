@@ -5,8 +5,6 @@ import { PlayAgain } from "./pages/Video/PlayAgain";
 import { Library } from "./pages/Video/Library";
 import { AddVideo } from "./pages/Video/AddVideo";
 import { Toaster } from "react-hot-toast";
-import { App } from "./pages/Video/Engine/App";
-import { NewEngine } from "./pages/Video/Engine/NewEngine";
 
 export const Navigator = () => {
   return (
@@ -16,10 +14,8 @@ export const Navigator = () => {
         <Route path="/video/:video_id" Component={Video} />
         <Route path="/feedback" Component={Feedback} />
         <Route path="/playagain" Component={PlayAgain} />
-        <Route path="/" Component={Library} />
         <Route path="/add_video" Component={AddVideo} />
-        <Route path="/engine" Component={App} />
-        <Route path="/new_engine" Component={NewEngine} />
+        <Route path="/" Component={Library} />
       </Routes>
     </BrowserRouter>
   );

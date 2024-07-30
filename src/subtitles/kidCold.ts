@@ -1,0 +1,607 @@
+export const kidCold = `
+1
+00:00:00,000 --> 00:00:01,167
+I love that feeling when
+
+2
+00:00:01,167 --> 00:00:02,252
+it's the beginning of fall
+
+3
+00:00:02,252 --> 00:00:03,795
+and it's 55 degrees outside
+
+4
+00:00:03,795 --> 00:00:05,505
+and it's finally cold enough 
+to wear my favorite 
+
+5
+00:00:05,505 --> 00:00:07,590
+winter sweater and jacket 
+and beanie and gloves.
+
+6
+00:00:07,590 --> 00:00:10,051
+And I drink pumpkin spice lattes 
+to stay warm.
+
+7
+00:00:10,510 --> 00:00:12,470
+But I also love the feeling when 
+it's the middle of winter
+
+8
+00:00:12,470 --> 00:00:14,389
+and out of nowhere it's 55 degrees.
+
+9
+00:00:14,389 --> 00:00:15,724
+So I leave my parka home
+
+10
+00:00:15,724 --> 00:00:17,392
+and go outside in my 
+shorts and t-shirt
+
+11
+00:00:17,392 --> 00:00:18,935
+and I feel the warmth of the 
+sun on my skin.
+
+12
+00:00:18,935 --> 00:00:21,813
+And I consider going to the beach
+to tan because it's so warm.
+
+13
+00:00:22,605 --> 00:00:23,565
+The temperature is the same
+
+14
+00:00:23,565 --> 00:00:25,942
+but my reaction to it 
+is vastly different.
+
+15
+00:00:26,192 --> 00:00:27,360
+Part of the reason why
+
+16
+00:00:27,360 --> 00:00:30,572
+is that there's more of a substance
+in my body in January
+
+17
+00:00:30,572 --> 00:00:31,740
+as compared to September.
+
+18
+00:00:31,781 --> 00:00:33,992
+It's the same substance that allows 
+kids and teens
+
+19
+00:00:33,992 --> 00:00:36,911
+to handle the cold weather 
+better than adults.
+
+20
+00:00:40,457 --> 00:00:41,875
+When you're hot, 
+you sweat.
+
+21
+00:00:41,875 --> 00:00:43,418
+When you're cold, 
+you shiver.
+
+22
+00:00:43,418 --> 00:00:44,878
+But just before you start 
+to shiver
+
+23
+00:00:44,878 --> 00:00:46,838
+your body actually does something else.
+
+24
+00:00:46,921 --> 00:00:48,465
+It starts to burn fat...
+
+25
+00:00:48,590 --> 00:00:50,091
+but not the fat we 
+usually think of.
+
+26
+00:00:50,258 --> 00:00:53,344
+There are two categories of fat 
+that we like to think about.
+
+27
+00:00:53,344 --> 00:00:54,512
+There's the white fat.
+
+28
+00:00:54,512 --> 00:00:57,807
+White fat is the one that we tend to 
+just think of as “fat”.
+
+29
+00:00:58,391 --> 00:01:00,393
+It's called white because 
+it looks white.
+
+30
+00:01:00,393 --> 00:01:02,103
+White fat exists all throughout the body
+
+31
+00:01:02,103 --> 00:01:03,855
+cushioning our bones and organs.
+
+32
+00:01:03,855 --> 00:01:06,107
+That's Dr. Aaron Cypess, 
+by the way.
+
+33
+00:01:06,775 --> 00:01:08,359
+White fat cells have many functions
+
+34
+00:01:08,359 --> 00:01:09,652
+one of the most important being that
+
+35
+00:01:09,652 --> 00:01:11,654
+they're the body's primary 
+energy source.
+
+36
+00:01:11,946 --> 00:01:15,617
+Every single day we are 
+using the fuel
+
+37
+00:01:15,617 --> 00:01:18,203
+that's inside the 
+white fat cells.
+
+38
+00:01:18,244 --> 00:01:19,412
+But there's another type of fat
+
+39
+00:01:19,412 --> 00:01:22,082
+that has a totally different function: 
+
+40
+00:01:22,082 --> 00:01:22,707
+Brown fat. 
+
+41
+00:01:22,916 --> 00:01:24,459
+These cells are much smaller
+
+42
+00:01:24,459 --> 00:01:27,003
+and because of that, resemble 
+muscle more than fat.
+
+43
+00:01:27,212 --> 00:01:29,380
+Instead of one large 
+lipid droplet 
+
+44
+00:01:29,380 --> 00:01:31,800
+in a white fat cell, 
+the brown fat cell
+
+45
+00:01:31,800 --> 00:01:35,303
+is one tightly packed bag 
+of mitochondria.
+
+46
+00:01:35,345 --> 00:01:37,514
+This is what gives it 
+its brown appearance.
+
+47
+00:01:37,639 --> 00:01:40,183
+And if you remember anything from 
+high school biology class...
+
+48
+00:01:40,308 --> 00:01:43,436
+you know that the mitochondria
+are the powerhouse of the cell.
+
+49
+00:01:45,146 --> 00:01:48,650
+Brown fat, instead of serving as an energy
+reserve for organs
+
+50
+00:01:48,650 --> 00:01:49,859
+throughout the body to burn,
+
+51
+00:01:49,859 --> 00:01:52,529
+uses its power to burn energy 
+on its own.
+
+52
+00:01:52,821 --> 00:01:53,822
+And unlike white fat
+
+53
+00:01:53,822 --> 00:01:57,158
+it's only located in a few 
+tactically positioned areas.
+
+54
+00:01:57,200 --> 00:02:00,453
+It is in the neck, the shoulders, 
+in the upper arms.
+
+55
+00:02:00,453 --> 00:02:03,039
+It's down the spine and then 
+some places within the belly.
+
+56
+00:02:03,206 --> 00:02:05,250
+Lots of overlap with major blood vessels
+
+57
+00:02:05,250 --> 00:02:08,419
+because warming the blood effectively warms the whole body.
+
+58
+00:02:08,419 --> 00:02:10,463
+The brown fat around the neck vessels
+
+59
+00:02:10,463 --> 00:02:12,340
+heats up the blood,
+goes to the brain.
+
+60
+00:02:12,340 --> 00:02:12,924
+That's good.
+
+61
+00:02:12,924 --> 00:02:14,551
+The brown fat depots 
+in the shoulders
+
+62
+00:02:14,551 --> 00:02:16,928
+that blood, once it's been 
+heated by the brown fat
+
+63
+00:02:16,928 --> 00:02:19,472
+goes right — very quickly,
+into the heart
+
+64
+00:02:19,472 --> 00:02:21,724
+and then can get pumped 
+to the rest of the body.
+
+65
+00:02:21,933 --> 00:02:24,144
+And that's the first line of defense 
+against the cold.
+
+66
+00:02:24,561 --> 00:02:27,105
+If it's not enough to raise the body
+temperature sufficiently...
+
+67
+00:02:27,355 --> 00:02:29,107
+then the body shivers.
+
+68
+00:02:29,440 --> 00:02:30,692
+But one of the craziest things
+
+69
+00:02:30,692 --> 00:02:32,694
+that I learned while researching 
+this story is that...
+
+70
+00:02:33,111 --> 00:02:34,612
+babies can't shiver.
+
+71
+00:02:34,946 --> 00:02:36,531
+When babies are born
+
+72
+00:02:36,531 --> 00:02:39,534
+they do not have the muscle mass
+
+73
+00:02:39,534 --> 00:02:41,244
+and perhaps not even 
+so much of the coordination
+
+74
+00:02:41,244 --> 00:02:43,788
+with the brain and the muscle 
+to shiver effectively.
+
+75
+00:02:44,038 --> 00:02:46,624
+So they need other ways 
+of generating heat
+
+76
+00:02:46,624 --> 00:02:48,084
+and brown fat is part of that.
+
+77
+00:02:48,084 --> 00:02:50,378
+Babies are born with 
+a lot of brown fat.
+
+78
+00:02:50,753 --> 00:02:52,255
+According to the Cleveland Clinic
+
+79
+00:02:52,255 --> 00:02:54,674
+about 2 to 5% of a baby's body weight 
+
+80
+00:02:54,674 --> 00:02:56,009
+is made up of this stuff.
+
+81
+00:02:56,009 --> 00:02:58,052
+It's necessary for our survival.
+
+82
+00:02:58,344 --> 00:02:59,554
+The peak age for brown fat
+
+83
+00:02:59,554 --> 00:03:01,598
+actually seems to be in the teen years
+
+84
+00:03:01,598 --> 00:03:03,725
+which explains why a lot of the guys 
+in my high school
+
+85
+00:03:03,725 --> 00:03:05,393
+wore shorts in the winter.
+
+86
+00:03:05,393 --> 00:03:07,645
+But as we get older, our body 
+makes less of it.
+
+87
+00:03:07,896 --> 00:03:10,023
+And this could give us 
+some insight into
+
+88
+00:03:10,023 --> 00:03:11,316
+why kids seem to run hot
+
+89
+00:03:11,316 --> 00:03:13,943
+and our parents or grandparents 
+seem to run cold.
+
+90
+00:03:14,068 --> 00:03:15,695
+Older people...
+
+91
+00:03:15,987 --> 00:03:18,239
+they certainly have much less 
+brown fat...
+
+92
+00:03:18,448 --> 00:03:20,783
+in terms of absolute 
+and relative amounts.
+
+93
+00:03:20,992 --> 00:03:22,160
+There's also less muscle
+
+94
+00:03:22,160 --> 00:03:24,120
+which is also important
+for generating heat.
+
+95
+00:03:24,120 --> 00:03:26,289
+The similarities between 
+brown fat and muscle
+
+96
+00:03:26,289 --> 00:03:27,832
+don't end there, though.
+
+97
+00:03:27,832 --> 00:03:31,169
+If you work your brown fat out, 
+it also increases volume.
+
+98
+00:03:31,419 --> 00:03:33,963
+And the way you do this is 
+by exposing yourself
+
+99
+00:03:33,963 --> 00:03:36,424
+to the cold for extended periods of time...
+
+100
+00:03:36,633 --> 00:03:39,093
+as this 2014 study shows.
+
+101
+00:03:39,093 --> 00:03:41,763
+Look at how much more brown fat 
+these men from Maryland
+
+102
+00:03:41,763 --> 00:03:44,432
+had after a month of exposure 
+to cold temperatures.
+
+103
+00:03:44,849 --> 00:03:46,601
+And look how much less they had
+
+104
+00:03:46,601 --> 00:03:48,603
+when exposed to warm temperatures.
+
+105
+00:03:48,728 --> 00:03:51,522
+Which gives us some insight into 
+why 55 degrees in the winter
+
+106
+00:03:51,522 --> 00:03:52,649
+can feel so much warmer
+
+107
+00:03:52,649 --> 00:03:54,943
+than 55 degrees in the fall.
+
+108
+00:03:55,109 --> 00:03:57,237
+Brown fat doesn't just 
+keep you warm, though.
+
+109
+00:03:57,737 --> 00:03:59,864
+Scientists have figured out 
+that having more of it
+
+110
+00:03:59,864 --> 00:04:02,909
+correlates to lower risk of 
+diabetes and heart disease.
+
+111
+00:04:03,451 --> 00:04:04,869
+Studying the effects of brown fat
+
+112
+00:04:04,869 --> 00:04:07,538
+using cold exposure 
+is challenging, though.
+
+113
+00:04:07,622 --> 00:04:10,875
+One challenge is that 
+it's hard to dose cold.
+
+114
+00:04:10,959 --> 00:04:13,086
+How much... I gave you ‘this’ amount of cold.
+
+115
+00:04:13,086 --> 00:04:14,462
+I mean, you know the temperature, but
+
+116
+00:04:14,462 --> 00:04:15,505
+it's hard to know what you're doing
+
+117
+00:04:15,505 --> 00:04:16,839
+and therefore it's very hard to design a study
+
+118
+00:04:16,839 --> 00:04:18,048
+where it's reproducible.
+
+119
+00:04:18,048 --> 00:04:19,007
+So instead
+
+120
+00:04:19,007 --> 00:04:21,677
+they're trying to activate 
+brown fat with medicine
+
+121
+00:04:21,678 --> 00:04:24,597
+to study how burning it 
+affects us biologically.
+
+122
+00:04:24,722 --> 00:04:26,641
+A medication called Mirabegron
+
+123
+00:04:26,641 --> 00:04:29,560
+which is approved to treat 
+overactive bladder
+
+124
+00:04:29,560 --> 00:04:31,396
+was able to activate the brown fat
+
+125
+00:04:31,396 --> 00:04:32,814
+in a way that was very similar
+
+126
+00:04:32,814 --> 00:04:35,024
+to the effectiveness of the cold exposure.
+
+127
+00:04:35,316 --> 00:04:37,735
+There's a lot we still don't know about brown fat...
+
+128
+00:04:37,986 --> 00:04:39,654
+but we do know that our bodies
+
+129
+00:04:39,654 --> 00:04:41,656
+use it to adapt to cold weather.
+
+130
+00:04:41,656 --> 00:04:44,367
+And when a kid doesn't want 
+to put a coat on in the winter
+
+131
+00:04:44,367 --> 00:04:46,744
+it’s not necessarily that 
+they're just stubborn.
+
+132
+00:04:47,245 --> 00:04:48,663
+It might just be because they have 
+
+133
+00:04:48,663 --> 00:04:50,331
+a little more of something 
+in their body 
+
+134
+00:04:50,331 --> 00:04:51,541
+than you do.
+`;

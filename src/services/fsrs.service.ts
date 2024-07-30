@@ -41,14 +41,15 @@ export class FSRSService {
     return cardsToReview[0];
   };
 
-  updateCardRating = (card: Subtitle, rating: Rating) => {
-    const scheduling_cards = this.fsrs.repeat(card.fsrsCard, card.fsrsCard.due);
+  updateCardRating = async (card: Subtitle, rating: Rating) => {
+    const scheduling_cards = this.fsrs.repeat(card.fsrsCard, new Date());
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-expect-error
     card.fsrsCard = scheduling_cards[rating].card;
+    console.log("updateCardRating", card, rating);
+    await this.dbService.updateSubtitle(card.id, card.fsrsCard);
 
-    console.log("updateCardRating", card);
     this.getCardToReview(card.video_id);
   };
 }

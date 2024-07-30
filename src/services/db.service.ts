@@ -1,7 +1,7 @@
 import { Card } from "ts-fsrs";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import Dexie, { InsertType, type EntityTable } from "dexie";
-import { Cue } from "webvtt-parser";
+import { Entry } from "@plussub/srt-vtt-parser/dist/types";
 import { initDbWithDummyData } from "./initDb";
 
 export interface Video {
@@ -14,7 +14,7 @@ export interface Video {
 export interface Subtitle {
   id: number;
   video_id: string;
-  subtitle: Cue;
+  subtitle: Entry;
   fsrsCard: Card;
 }
 

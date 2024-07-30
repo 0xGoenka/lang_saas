@@ -1,16 +1,16 @@
 import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
-import { Cue } from "webvtt-parser";
 import { observable, WritableObservable } from "micro-observables";
 import { E_EVENT } from "../constants/event";
 import { NavigateFunction } from "react-router-dom";
 import { FSRSService } from "./fsrs.service";
+import { Entry } from "@plussub/srt-vtt-parser/dist/types";
 
 export class PlayerService {
   fsrsService: FSRSService;
 
   player: YouTubePlayer | null = null;
   isPlaying = observable(false);
-  currentSub: WritableObservable<Cue | null> = observable(null);
+  currentSub: WritableObservable<Entry | null> = observable(null);
   currentSubId: WritableObservable<number | null> = observable(null);
   isPlayingAgain = observable(false);
   videoId: string | undefined = undefined;
@@ -42,7 +42,7 @@ export class PlayerService {
 
     this.player.playVideo();
     this.isPlaying.set(true);
-    this.player.seekTo(currentSub.startTime, true);
+    this.player.seekTo(currentSub.from / 1000, true);
   }
 
   onStateChange: YouTubeProps["onStateChange"] = async (event) => {
@@ -58,7 +58,7 @@ export class PlayerService {
         E_EVENT.display_subtitle.dispatch();
         this.isPlaying.set(false);
         this.isPlayingAgain.set(false);
-      }, (currentSub.endTime - currentSub.startTime) * 1000);
+      }, currentSub.to - currentSub.from);
     }
   };
 

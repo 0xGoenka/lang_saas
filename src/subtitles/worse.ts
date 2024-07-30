@@ -1,0 +1,867 @@
+export const worse = `
+1
+00:00:00,133 --> 00:00:02,302
+So have you all noticed that 
+everything kind of sucks now?
+
+2
+00:00:02,335 --> 00:00:04,170
+And I don't mean, like, the 
+general state of the world.
+
+3
+00:00:04,170 --> 00:00:06,473
+I mean, like, the stuff we buy 
+is just, like
+
+4
+00:00:06,473 --> 00:00:09,075
+a little bit worse than it was 
+10 years ago.
+
+5
+00:00:09,209 --> 00:00:10,844
+And I really started thinking about this 
+
+6
+00:00:10,844 --> 00:00:13,847
+because my coworker Izzie wrote about 
+how she had to replace a bra.
+
+7
+00:00:14,280 --> 00:00:16,416
+So I'm gonna do what any normal person would do
+
+8
+00:00:16,416 --> 00:00:19,919
+which is buy the exact same thing from the exact same place.
+
+9
+00:00:19,919 --> 00:00:21,121
+And then after a few weeks
+
+10
+00:00:21,121 --> 00:00:22,055
+it just kind of...
+
+11
+00:00:22,055 --> 00:00:23,056
+Just kind of fell apart.
+
+12
+00:00:23,056 --> 00:00:26,559
+So this kind of started me
+on this journey of
+
+13
+00:00:26,559 --> 00:00:30,366
+okay, I'm hearing anecdotally from 
+so many people I talk to
+
+14
+00:00:30,366 --> 00:00:31,631
+in my life.
+
+15
+00:00:31,631 --> 00:00:32,999
+ From coffee machines...
+
+16
+00:00:33,099 --> 00:00:35,635
+phones, computers, sweaters...
+
+17
+00:00:35,802 --> 00:00:37,203
+They all tear or break
+
+18
+00:00:37,203 --> 00:00:39,973
+or explode way sooner 
+than they used to.
+
+19
+00:00:40,440 --> 00:00:41,608
+So what's going on?
+
+20
+00:00:41,608 --> 00:00:42,809
+And is there a way to climb out 
+
+21
+00:00:42,809 --> 00:00:45,512
+from under this pile of consumer trash?
+
+22
+00:00:49,616 --> 00:00:51,951
+So let's talk about this in the most 
+basic of terms
+
+23
+00:00:51,951 --> 00:00:53,553
+starting with the design process.
+
+24
+00:00:53,753 --> 00:00:55,388
+When a company wants 
+to make a thing
+
+25
+00:00:55,388 --> 00:00:57,490
+let's say, like a jacket
+
+26
+00:00:57,490 --> 00:00:59,759
+there are three main factors to consider.
+
+27
+00:00:59,759 --> 00:01:01,895
+Functionality: Does it work?
+
+28
+00:01:01,895 --> 00:01:03,963
+Appearance: Does it look good?
+
+29
+00:01:04,664 --> 00:01:06,166
+And manufacturability: 
+
+30
+00:01:06,166 --> 00:01:09,602
+Is it easy and fairly inexpensive 
+to make a lot of this product?
+
+31
+00:01:10,170 --> 00:01:12,839
+Generally, a good product will have a good blend
+
+32
+00:01:12,839 --> 00:01:14,040
+of these three things.
+
+33
+00:01:14,374 --> 00:01:15,341
+But in recent years
+
+34
+00:01:15,341 --> 00:01:17,243
+this process has been thrown off balance.
+
+35
+00:01:17,510 --> 00:01:19,312
+Let's look at clothes, for example.
+
+36
+00:01:19,746 --> 00:01:21,514
+In the past, if you needed 
+a new jacket
+
+37
+00:01:21,514 --> 00:01:23,583
+you used to go to a tailor,
+get measured
+
+38
+00:01:23,583 --> 00:01:25,885
+choose material and 
+have it made.
+
+39
+00:01:25,885 --> 00:01:28,388
+Then for decades, instead of going 
+to a tailor for a jacket
+
+40
+00:01:28,388 --> 00:01:29,656
+we went to department stores 
+
+41
+00:01:29,656 --> 00:01:31,891
+and bought things that were mass produced.
+
+42
+00:01:31,891 --> 00:01:33,026
+By the 80s and 90s
+
+43
+00:01:33,026 --> 00:01:35,695
+we had tons of options and stores to choose from.
+
+44
+00:01:36,262 --> 00:01:39,032
+And now many of us just kind of go online
+
+45
+00:01:39,032 --> 00:01:41,134
+click "add to cart" and 
+buy a product
+
+46
+00:01:41,134 --> 00:01:43,436
+without ever seeing it 
+in person.
+
+47
+00:01:44,604 --> 00:01:47,507
+But it's not just how we buy, 
+it's how often we buy.
+
+48
+00:01:47,740 --> 00:01:50,076
+And for that, we can kind of 
+blame this man.
+
+49
+00:01:50,343 --> 00:01:52,745
+Ernest Elmo, yeah,
+incredible name. 
+
+50
+00:01:52,745 --> 00:01:54,914
+In the 1930s, during the Great Depression
+
+51
+00:01:54,914 --> 00:01:56,883
+he wrote this paper
+that was like
+
+52
+00:01:56,883 --> 00:01:59,052
+"Okay, the government 
+should really support
+
+53
+00:01:59,052 --> 00:02:01,721
+this idea of planned obsolescence."
+
+54
+00:02:01,855 --> 00:02:04,090
+Except he didn't call it planned obsolescence.
+
+55
+00:02:04,324 --> 00:02:06,626
+He called it "consumer engineering."
+
+56
+00:02:06,626 --> 00:02:07,861
+Remember that jacket you bought?
+
+57
+00:02:07,861 --> 00:02:09,829
+Well, it's a new season, and it's out of style.
+
+58
+00:02:09,829 --> 00:02:10,663
+Buttons are out.
+
+59
+00:02:10,663 --> 00:02:11,598
+Zippers are in.
+
+60
+00:02:11,598 --> 00:02:13,099
+So you buy something new.
+
+61
+00:02:13,099 --> 00:02:14,534
+But not because there was anything
+
+62
+00:02:14,534 --> 00:02:16,336
+physically wrong with the original.
+
+63
+00:02:16,336 --> 00:02:18,438
+That's why it's called consumer engineering, right?
+
+64
+00:02:18,471 --> 00:02:20,373
+Like, it's up here in the brain.
+
+65
+00:02:20,373 --> 00:02:22,041
+And we've been living this way 
+for decades.
+
+66
+00:02:22,041 --> 00:02:24,711
+So now we all want the next best thing, all the time.
+
+67
+00:02:25,145 --> 00:02:27,113
+And that demand has 
+spun out of control.
+
+68
+00:02:28,348 --> 00:02:30,617
+Today we are surrounded.
+
+69
+00:02:31,050 --> 00:02:33,786
+The speed of certain trend cycles and 
+the fact that they're geared
+
+70
+00:02:33,786 --> 00:02:35,288
+towards these micro communities.
+
+71
+00:02:35,455 --> 00:02:38,158
+Like Stanley cups, when maybe a year ago
+
+72
+00:02:38,158 --> 00:02:39,859
+was Hydro Flasks.
+
+73
+00:02:39,859 --> 00:02:42,328
+The result is that we buy a lot.
+
+74
+00:02:42,662 --> 00:02:46,766
+A survey done in 2021 found that nearly 
+40% of UK consumers
+
+75
+00:02:46,766 --> 00:02:49,169
+buy clothing as often as once a month.
+
+76
+00:02:49,569 --> 00:02:53,139
+The UN reports that between 
+the years 2000 and 2014
+
+77
+00:02:53,139 --> 00:02:56,009
+the average person was buying 60% more clothing...
+
+78
+00:02:56,209 --> 00:02:58,945
+and each item was only kept half as long.
+
+79
+00:02:59,512 --> 00:03:01,581
+So we want to buy a lot of stuff fast
+
+80
+00:03:01,581 --> 00:03:03,449
+and because we replace our stuff so often
+
+81
+00:03:03,449 --> 00:03:05,952
+we don't really want to spend a lot of money on it...
+
+82
+00:03:06,319 --> 00:03:08,154
+which has an effect too.
+
+83
+00:03:08,154 --> 00:03:10,223
+People aren't willing to pay more
+
+84
+00:03:10,223 --> 00:03:12,659
+for something they had purchased a while ago.
+
+85
+00:03:12,659 --> 00:03:16,863
+So like if I paid 30 bucks 
+for a bra, 10 years ago
+
+86
+00:03:16,863 --> 00:03:19,265
+it would be really hard for me to buy it at $50.
+
+87
+00:03:19,465 --> 00:03:22,735
+Even though in the last 10 years labor costs have risen.
+
+88
+00:03:23,002 --> 00:03:24,804
+So what we're left with 
+is an incredibly fast
+
+89
+00:03:24,804 --> 00:03:26,806
+cycle of demand for low cost products.
+
+90
+00:03:26,806 --> 00:03:28,441
+And here's what that looks like.
+
+91
+00:03:28,675 --> 00:03:30,343
+In order to speed up manufacturing
+
+92
+00:03:30,343 --> 00:03:32,212
+companies have to either hire more people
+
+93
+00:03:32,212 --> 00:03:33,813
+alter how the product is made 
+
+94
+00:03:33,813 --> 00:03:34,314
+or both. 
+
+95
+00:03:34,547 --> 00:03:35,882
+But they also have to keep prices
+
+96
+00:03:35,882 --> 00:03:37,951
+low enough for consumers to keep buying.
+
+97
+00:03:38,418 --> 00:03:40,720
+So they may start swapping materials
+
+98
+00:03:40,720 --> 00:03:43,790
+like cotton or silk for a cheaper synthetic material.
+
+99
+00:03:44,224 --> 00:03:46,593
+Or rely on a more basic stitching pattern
+
+100
+00:03:46,593 --> 00:03:48,895
+that maybe just doesn't hold as well.
+
+101
+00:03:48,895 --> 00:03:52,332
+So if after 10 years, you're still paying 
+the same price
+
+102
+00:03:52,332 --> 00:03:55,201
+or close to the same price for a product
+that looks the same...
+
+103
+00:03:55,902 --> 00:03:58,238
+well, something had to change.
+
+104
+00:03:59,472 --> 00:04:00,473
+So you might say,
+
+105
+00:04:00,473 --> 00:04:03,142
+"okay, Kim, fashion trends are moving too fast
+
+106
+00:04:03,142 --> 00:04:05,311
+and we buy too much stuff. I get it. I get it."
+
+107
+00:04:05,311 --> 00:04:07,447
+"But why does my washing machine suck?"
+
+108
+00:04:07,947 --> 00:04:09,415
+And that's a great question.
+
+109
+00:04:09,415 --> 00:04:11,384
+Let's talk about technology.
+
+110
+00:04:12,652 --> 00:04:13,753
+When things like computers 
+
+111
+00:04:13,753 --> 00:04:15,388
+first became part of our daily lives
+
+112
+00:04:15,388 --> 00:04:18,124
+it made a lot of sense to upgrade devices pretty often.
+
+113
+00:04:18,156 --> 00:04:21,660
+There was actually very big differences in what a device did
+
+114
+00:04:21,661 --> 00:04:24,964
+that's 2 years old versus one that 
+was brand new in the market.
+
+115
+00:04:24,964 --> 00:04:26,532
+There was just big leaps.
+
+116
+00:04:26,532 --> 00:04:27,800
+This is Gay Gordon-Bryne.
+
+117
+00:04:27,800 --> 00:04:30,903
+She directs a consumer advocacy group 
+called the Repair Association.
+
+118
+00:04:30,903 --> 00:04:32,639
+You know, if you had a 2 year old thing
+
+119
+00:04:32,639 --> 00:04:35,341
+you probably couldn't do 
+half the cool stuff 
+
+120
+00:04:35,341 --> 00:04:36,676
+that the other guy could do.
+
+121
+00:04:36,676 --> 00:04:38,344
+So that kind of fueled
+
+122
+00:04:38,344 --> 00:04:40,980
+the replacement cycle because you really did
+
+123
+00:04:40,980 --> 00:04:44,350
+get something better in terms of functionality.
+
+124
+00:04:44,484 --> 00:04:46,619
+For example, when the iPhone was first made
+
+125
+00:04:46,619 --> 00:04:48,721
+it was a major breakthrough.
+
+126
+00:04:48,721 --> 00:04:50,189
+Subsequent phones up to a point
+
+127
+00:04:50,189 --> 00:04:52,125
+responded to major technological leaps.
+
+128
+00:04:52,125 --> 00:04:54,694
+Like look at the difference between 
+the 3GS and the 4.
+
+129
+00:04:55,561 --> 00:04:57,764
+The iPhone 4 had a way better resolution
+
+130
+00:04:57,764 --> 00:05:00,033
+and a front facing camera.
+
+131
+00:05:00,033 --> 00:05:01,934
+For a while, these major leaps
+
+132
+00:05:01,934 --> 00:05:04,170
+between models was the norm for technology.
+
+133
+00:05:04,570 --> 00:05:08,441
+But we're not making those giant changes as often anymore.
+
+134
+00:05:08,708 --> 00:05:11,678
+Instead, partly to make us want to buy more things...
+
+135
+00:05:11,878 --> 00:05:14,480
+companies make very minor adjustments year after year.
+
+136
+00:05:14,914 --> 00:05:16,949
+So the dryer you own may now play
+
+137
+00:05:16,949 --> 00:05:19,719
+a fun little song at the end of a cycle 
+instead of screaming.
+
+138
+00:05:19,986 --> 00:05:21,688
+And now, as devices advanced
+
+139
+00:05:21,688 --> 00:05:23,389
+and got increasing complicated
+
+140
+00:05:23,389 --> 00:05:25,058
+there was another problem 
+for consumers.
+
+141
+00:05:25,091 --> 00:05:28,027
+All these things started to come into the into the world.
+
+142
+00:05:28,027 --> 00:05:30,396
+They didn't come in 
+with repair tools.
+
+143
+00:05:30,396 --> 00:05:32,398
+They came in to be thrown away.
+
+144
+00:05:32,398 --> 00:05:34,367
+Basically, when this stuff breaks.
+
+145
+00:05:34,367 --> 00:05:37,236
+It's often intentionally impossible to repair.
+
+146
+00:05:37,370 --> 00:05:39,872
+Because if you buy something that has a computer chip in it
+
+147
+00:05:39,872 --> 00:05:41,908
+or a circuit board or whatever
+
+148
+00:05:41,908 --> 00:05:44,610
+you probably can't make one in your garage.
+
+149
+00:05:45,545 --> 00:05:47,347
+So you're very reliant on
+
+150
+00:05:47,347 --> 00:05:49,515
+what the manufacturer will agree to sell.
+
+151
+00:05:49,749 --> 00:05:52,051
+And very often they don't agree to sell parts
+
+152
+00:05:52,051 --> 00:05:55,154
+and tools and diagnostics or even give you a diagram.
+
+153
+00:05:55,221 --> 00:05:58,257
+But sometimes it really just isn't possible to fix
+
+154
+00:05:58,257 --> 00:06:00,626
+because they cut corners, just like in fashion
+
+155
+00:06:00,793 --> 00:06:03,563
+replacing metal and screws with
+plastic and glue.
+
+156
+00:06:03,830 --> 00:06:07,166
+And these kind of issues apply 
+across the board in technology...
+
+157
+00:06:07,333 --> 00:06:10,436
+from your phone to toasters to blenders...
+
+158
+00:06:10,603 --> 00:06:13,172
+to electric wheelchairs to your car.
+
+159
+00:06:13,439 --> 00:06:16,008
+If you walk around your house or your apartment
+
+160
+00:06:16,008 --> 00:06:17,243
+and you start cataloging
+
+161
+00:06:17,243 --> 00:06:19,445
+how many things you own that have chips in them
+
+162
+00:06:19,712 --> 00:06:22,782
+I think you'll be really surprised how big that
+
+163
+00:06:22,782 --> 00:06:24,951
+lack of repair problem actually is.
+
+164
+00:06:25,885 --> 00:06:27,120
+I want people to feel hopeful.
+
+165
+00:06:27,120 --> 00:06:28,621
+Yes, this is something that's
+
+166
+00:06:28,621 --> 00:06:30,123
+out of our control in some ways
+
+167
+00:06:30,123 --> 00:06:31,691
+and not out of our control in others.
+
+168
+00:06:31,691 --> 00:06:34,727
+I don't want you to feel guilty for partaking in...
+
+169
+00:06:34,961 --> 00:06:37,563
+in this system where like so many people, we've been kind of
+
+170
+00:06:37,563 --> 00:06:39,866
+brought up culturally to think in this way 
+
+171
+00:06:39,866 --> 00:06:41,501
+or to buy in this way.
+
+172
+00:06:41,501 --> 00:06:43,336
+Compared to other things that suck in the world
+
+173
+00:06:43,336 --> 00:06:45,071
+we actually have a 
+surprising amount of control
+
+174
+00:06:45,071 --> 00:06:46,339
+over this situation.
+
+175
+00:06:46,339 --> 00:06:48,608
+With tech, fighting for the right to repair
+
+176
+00:06:48,608 --> 00:06:50,710
+is actually extremely effective.
+
+177
+00:06:51,077 --> 00:06:54,347
+New York State just passed the right to repair bill in 2022
+
+178
+00:06:54,347 --> 00:06:56,916
+and it's not perfect but at least 
+it's something.
+
+179
+00:06:56,916 --> 00:06:59,085
+With fashion, stay away from 
+micro trends
+
+180
+00:06:59,085 --> 00:07:01,120
+and fast fashion as often as you can.
+
+181
+00:07:01,120 --> 00:07:03,055
+Buy with intention and learn to take care
+
+182
+00:07:03,055 --> 00:07:04,557
+of the things you do have.
+
+183
+00:07:04,557 --> 00:07:07,527
+Think of your objects as having maintenance.
+
+184
+00:07:07,560 --> 00:07:08,961
+Read those care labels.
+
+185
+00:07:08,961 --> 00:07:11,397
+As consumers, it's going to take a little bit for us
+
+186
+00:07:11,397 --> 00:07:14,200
+to sift through all that trash and retrain our brains a bit.
+
+187
+00:07:14,400 --> 00:07:15,902
+But we can take small steps
+
+188
+00:07:15,902 --> 00:07:17,937
+to take back control of the process.
+
+189
+00:07:17,937 --> 00:07:21,808
+After all, all of this stuff is supposed to be made for us.
+
+190
+00:07:22,308 --> 00:07:23,810
+So let's make it clear what we want.
+
+191
+00:07:26,679 --> 00:07:29,315
+We have a map on our
+repair.org website
+
+192
+00:07:29,315 --> 00:07:31,050
+where you can go find your state...
+
+193
+00:07:31,317 --> 00:07:32,185
+click the picture...
+
+194
+00:07:32,452 --> 00:07:36,222
+and it'll bring up a—basically, 
+a letter writing widget.
+
+195
+00:07:36,622 --> 00:07:38,558
+Type in your address
+and it says...
+
+196
+00:07:38,991 --> 00:07:40,393
+Tell your repair story.
+
+197
+00:07:40,393 --> 00:07:42,161
+And if you really want 
+to do something
+
+198
+00:07:42,161 --> 00:07:43,629
+that's how it gets done. 
+
+199
+00:07:43,629 --> 00:07:46,132
+We've had over 100,000
+people do that.
+
+200
+00:07:46,132 --> 00:07:48,301
+Over 30,000 of them 
+in New York.
+
+201
+00:07:48,301 --> 00:07:49,836
+So, it does not surprise me that 
+
+202
+00:07:49,836 --> 00:07:51,971
+New York was the first one to
+actually pass a law.
+
+203
+00:07:52,772 --> 00:07:54,106
+Because that's where there was
+
+204
+00:07:54,106 --> 00:07:56,242
+a really big groundswell of interest. 
+`;
