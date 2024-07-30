@@ -32,12 +32,12 @@ const getSubs = async (video_id: string, navigate: NavigateFunction) => {
     }));
 
     await dbService.addVideo(video_id, title);
-    await dbService.bulkAddSubtitle(formatedCues);
+    // await dbService.bulkAddSubtitle(formatedCues);
 
     console.log("formatedCues", formatedCues);
   } catch (error) {
     console.log("error", error);
-    throw error.response.data;
+    // throw error.response.data;
   } finally {
     navigate("/");
   }

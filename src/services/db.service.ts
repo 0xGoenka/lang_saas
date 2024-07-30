@@ -78,7 +78,6 @@ export class DBService {
 
   updateSubtitle = async (id: number, fsrsCard: Card) => {
     try {
-      // @ts-expect-error
       await db.subtitles.update(id, { fsrsCard });
     } catch (e) {
       console.error(e);

@@ -3,7 +3,6 @@ import { PrimaryButton } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Loader } from "../../components/Loader";
 import { db, Video } from "../../services/db.service";
-import { E_Difficulty } from "../../constants/contants";
 import { useNavigate } from "react-router-dom";
 
 export const Library = () => {
@@ -40,35 +39,35 @@ export const Library = () => {
 export const LibVideo = ({ video }: { video: Video }) => {
   console.log("video.video_id", video.video_id);
   const navigate = useNavigate();
-  const easy_subtitles = useLiveQuery(() =>
-    db.subtitles
-      .where("video_id")
-      .equals(video.video_id)
-      .and((subtitle) => subtitle.difficulty === E_Difficulty.EASY)
-      .toArray()
-  );
+  // const easy_subtitles = useLiveQuery(() =>
+  //   db.subtitles
+  //     .where("video_id")
+  //     .equals(video.video_id)
+  //     .and((subtitle) => subtitle.difficulty === E_Difficulty.EASY)
+  //     .toArray()
+  // );
 
   const count = useLiveQuery(() =>
     db.subtitles.where("video_id").equals(video.video_id).count()
   );
 
-  if (!count || !easy_subtitles) return null;
+  if (!count) return null;
 
-  const progress = ((easy_subtitles?.length + 1) / count) * 100;
+  const progress = ((1 + 1) / count) * 100;
 
-  console.log(
-    "progress",
-    progress,
-    "videoId",
-    video.video_id,
-    "count",
-    count,
-    "easy_subtitles",
-    easy_subtitles.length,
-    easy_subtitles?.length + 1,
-    ((easy_subtitles?.length + 1) / count) * 100,
-    Math.round(progress).toString()
-  );
+  // console.log(
+  //   "progress",
+  //   progress,
+  //   "videoId",
+  //   video.video_id,
+  //   "count",
+  //   count,
+  //   "easy_subtitles",
+  //   easy_subtitles.length,
+  //   easy_subtitles?.length + 1,
+  //   ((easy_subtitles?.length + 1) / count) * 100,
+  //   Math.round(progress).toString()
+  // );
 
   return (
     <div
@@ -89,7 +88,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
             id={video.video_id}
           />
           <div className="ml-[14px] text-xs text-grey font-bold">
-            {easy_subtitles?.length} out of {count} mastered
+            {1 + 1} out of {count} mastered
           </div>
         </div>
       </div>
