@@ -38,8 +38,7 @@ export const initDbWithDummyData = async () => {
 
   db.videos.count().then((count) => {
     if (count === 1) {
-      db.videos.delete(1);
-      db.subtitles.delete(1);
+      db.delete();
     }
 
     if (count === 0) {
