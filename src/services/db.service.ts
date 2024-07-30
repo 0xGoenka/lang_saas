@@ -30,7 +30,7 @@ export const db = new Dexie("database") as Dexie & {
 };
 
 // Schema declaration:
-db.version(1).stores({
+db.version(2).stores({
   videos: "++id, video_id, name, url", // primary key "id" (for the runtime!)
   subtitles: "++id, video_id, subtitle, difficulty",
 });
