@@ -20,6 +20,8 @@ export const Video = () => {
     };
   }, [navigate]);
 
+  if (!video_id) navigate("/");
+
   return (
     <div className="relative flex flex-col h-screen justify-between">
       <Header text="Library" onClick={() => navigate("/")} />

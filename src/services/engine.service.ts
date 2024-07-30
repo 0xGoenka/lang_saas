@@ -3,6 +3,16 @@ import { E_Difficulty } from "../constants/contants";
 import { DBService } from "./db.service";
 import { shuffleArray } from "../utils/shuffleArray";
 
+export type Card = {
+  id: number;
+  video_id: string;
+  subtitle_id: number;
+  difficulty: number;
+  daysBetweenReviews: number;
+  dateLastReviewed: Date;
+  // answered: boolean;
+};
+
 export class EngineService {
   dbService: DBService;
   constructor(dbService: DBService) {
@@ -53,10 +63,12 @@ export class EngineService {
     shuffleArray(easySubtitles);
 
     const questionQueue = [
-      ...tooHardSubtitles.slice(0, 3),
-      ...hardSubtitles.slice(0, 3),
-      ...okSubtitles.slice(0, 3),
+      ...tooHardSubtitles.slice(0, 7),
+      ...hardSubtitles.slice(0, 4),
+      ...okSubtitles.slice(0, 2),
     ];
+
+    console.log("questionQueue", questionQueue);
 
     shuffleArray(questionQueue);
     return questionQueue;

@@ -2,52 +2,50 @@ import { useObservable } from "micro-observables";
 import { useServices } from "../../services/Services";
 import { TertiaryButton } from "../../components/Button";
 import { useNavigate } from "react-router-dom";
-import { E_Difficulty } from "../../constants/contants";
 import { Header } from "../../components/Header";
+import { decode } from "html-entities";
+import { Rating } from "ts-fsrs";
 
 export const Feedback = () => {
-  const { playerService, engineService } = useServices();
-  const subtitle = useObservable(playerService.currentSub);
-  const subtitleId = useObservable(playerService.currentSubId);
+  const { fsrsService } = useServices();
+  // const subtitle = useObservable(playerService.currentSub);
+  // const subtitleId = useObservable(playerService.currentSubId);
+  const cardToReview = useObservable(fsrsService.cardToReview);
   const navigate = useNavigate();
 
-  console.log("Feedback subtitle", subtitle);
+  if (!cardToReview) return <div>No card to review</div>;
+
+  console.log("Feedback subtitle", cardToReview.subtitle);
 
   return (
     <div className="relative flex flex-col h-screen justify-between">
       <Header text="Library" onClick={() => navigate("/")} />
-      <div className="text-white text-center">{subtitle?.text}</div>
+      <div className="text-white text-center">
+        {decode(cardToReview.subtitle.text)}
+      </div>
       <div className="justify-center items-center flex mb-[50px]">
         <div className="justify-evenly">
           <div className="m-[4px] mb-[8px]">
             <span className="m-[4px]">
               <TertiaryButton
                 onClick={() => {
-                  engineService.answerQuestion(
-                    subtitleId,
-                    E_Difficulty.TOO_HARD,
-                    navigate
-                  );
+                  fsrsService.updateCardRating(cardToReview, Rating.Again);
                 }}
               >
                 Too hard
                 <div className="mr-[8px] text-xs font-medium	">
-                  Will reappear in 1mn
+                  Will reappear in 5mn
                 </div>
               </TertiaryButton>
             </span>
             <span className="m-[4px]">
               <TertiaryButton
                 onClick={() => {
-                  engineService.answerQuestion(
-                    subtitleId,
-                    E_Difficulty.HARD,
-                    navigate
-                  );
+                  fsrsService.updateCardRating(cardToReview, Rating.Hard);
                 }}
               >
                 Hard
-                <div className="text-xs font-medium	">Will reappear in 6mn</div>
+                <div className="text-xs font-medium	">Will reappear in 10mn</div>
               </TertiaryButton>
             </span>
           </div>
@@ -55,25 +53,17 @@ export const Feedback = () => {
             <span className="m-[4px]">
               <TertiaryButton
                 onClick={() => {
-                  engineService.answerQuestion(
-                    subtitleId,
-                    E_Difficulty.OK,
-                    navigate
-                  );
+                  fsrsService.updateCardRating(cardToReview, Rating.Good);
                 }}
               >
                 Ok
-                <div className="text-xs font-medium	">Will reappear in 10mn</div>
+                <div className="text-xs font-medium	">Will reappear in 1H</div>
               </TertiaryButton>
             </span>
             <span className="m-[4px]">
               <TertiaryButton
                 onClick={() => {
-                  engineService.answerQuestion(
-                    subtitleId,
-                    E_Difficulty.EASY,
-                    navigate
-                  );
+                  fsrsService.updateCardRating(cardToReview, Rating.Easy);
                 }}
               >
                 Easy

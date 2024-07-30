@@ -1,31 +1,31 @@
-import { EngineService } from "./engine.service";
 import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
-import { WebVTTParser, Cue } from "webvtt-parser";
+import { Cue } from "webvtt-parser";
 import { observable, WritableObservable } from "micro-observables";
 import { E_EVENT } from "../constants/event";
 import { NavigateFunction } from "react-router-dom";
+import { FSRSService } from "./fsrs.service";
 
 export class PlayerService {
-  engineService: EngineService;
+  fsrsService: FSRSService;
 
   player: YouTubePlayer | null = null;
   isPlaying = observable(false);
-  parser = new WebVTTParser();
   currentSub: WritableObservable<Cue | null> = observable(null);
   currentSubId: WritableObservable<number | null> = observable(null);
   isPlayingAgain = observable(false);
   videoId: string | undefined = undefined;
 
-  constructor(engineService: EngineService) {
-    this.engineService = engineService;
+  constructor(fsrsService: FSRSService) {
+    this.fsrsService = fsrsService;
   }
 
   async getSubtitleToPlay() {
     if (!this.videoId) throw Error("No video id");
-    const currSub = await this.engineService.buildQuestionQueue(this.videoId);
+    await this.fsrsService.getCardToReview(this.videoId);
+    const currSub = this.fsrsService.cardToReview.get();
     if (!currSub) throw Error("No subtitle to play");
-    this.currentSubId.set(currSub[0].id);
-    this.currentSub.set(currSub[0].subtitle);
+    this.currentSubId.set(currSub.id);
+    this.currentSub.set(currSub.subtitle);
   }
 
   async playAgain(navigate: NavigateFunction) {
@@ -49,7 +49,7 @@ export class PlayerService {
     console.log({ event });
     // access to player in all event handlers via event.target
     if (event.data === YouTube.PlayerState.PLAYING) {
-      console.log("PLAYING");
+      console.log("PLAYING| is playing again", this.isPlayingAgain.get());
       await this.playVideoAt();
       const currentSub = this.currentSub.get();
       if (!currentSub) throw Error("Subtitles not ready");
@@ -57,6 +57,7 @@ export class PlayerService {
         this.player.pauseVideo();
         E_EVENT.display_subtitle.dispatch();
         this.isPlaying.set(false);
+        this.isPlayingAgain.set(false);
       }, (currentSub.endTime - currentSub.startTime) * 1000);
     }
   };

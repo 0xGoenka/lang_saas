@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Library = () => {
   const videos = useLiveQuery(() => db.videos.toArray());
+  const navigate = useNavigate();
 
   console.log("videos", videos);
   return (
@@ -23,7 +24,13 @@ export const Library = () => {
         </div>
       </div>
       <div>
-        <PrimaryButton onClick={() => {}}>Add a video</PrimaryButton>
+        <PrimaryButton
+          onClick={() => {
+            navigate("/add_video");
+          }}
+        >
+          Add a video
+        </PrimaryButton>
         <Footer />
       </div>
     </div>
@@ -31,6 +38,7 @@ export const Library = () => {
 };
 
 export const LibVideo = ({ video }: { video: Video }) => {
+  console.log("video.video_id", video.video_id);
   const navigate = useNavigate();
   const easy_subtitles = useLiveQuery(() =>
     db.subtitles
@@ -40,15 +48,31 @@ export const LibVideo = ({ video }: { video: Video }) => {
       .toArray()
   );
 
-  const count = useLiveQuery(() => db.subtitles.count());
+  const count = useLiveQuery(() =>
+    db.subtitles.where("video_id").equals(video.video_id).count()
+  );
 
   if (!count || !easy_subtitles) return null;
 
-  const progress = (easy_subtitles?.length / count) * 100;
+  const progress = ((easy_subtitles?.length + 1) / count) * 100;
+
+  console.log(
+    "progress",
+    progress,
+    "videoId",
+    video.video_id,
+    "count",
+    count,
+    "easy_subtitles",
+    easy_subtitles.length,
+    easy_subtitles?.length + 1,
+    ((easy_subtitles?.length + 1) / count) * 100,
+    Math.round(progress).toString()
+  );
 
   return (
     <div
-      className="flex text-lightGrey cursor-pointer"
+      className="flex text-lightGrey cursor-pointer mb-[16px]"
       onClick={() => navigate(`/video/${video.video_id}`)}
     >
       <div className="flex-1 mr-[16px]">
@@ -59,8 +83,11 @@ export const LibVideo = ({ video }: { video: Video }) => {
       </div>
       <div className="flex-1 flex flex-col justify-between">
         <div className="font-bold text-xs leading-[15px]">{video.name}</div>
-        <div className="items-end flex">
-          <Loader progress={progress.toString()} />
+        <div className={`items-end flex ${video.video_id}`}>
+          <Loader
+            progress={Math.round(progress).toString()}
+            id={video.video_id}
+          />
           <div className="ml-[14px] text-xs text-grey font-bold">
             {easy_subtitles?.length} out of {count} mastered
           </div>

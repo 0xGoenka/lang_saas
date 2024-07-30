@@ -1,8 +1,8 @@
+import { Card } from "ts-fsrs";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import Dexie, { type EntityTable } from "dexie";
-import { E_Difficulty } from "../constants/contants";
-import { Cue, WebVTTParser } from "webvtt-parser";
-import { cookieSubtitles } from "../subtitles/cookie";
+import Dexie, { InsertType, type EntityTable } from "dexie";
+import { Cue } from "webvtt-parser";
+import { initDbWithDummyData } from "./initDb";
 
 export interface Video {
   id: number;
@@ -15,7 +15,7 @@ export interface Subtitle {
   id: number;
   video_id: string;
   subtitle: Cue;
-  difficulty: string;
+  fsrsCard: Card;
 }
 
 export const db = new Dexie("database") as Dexie & {
@@ -35,32 +35,26 @@ db.version(1).stores({
   subtitles: "++id, video_id, subtitle, difficulty",
 });
 
-const parser = new WebVTTParser();
-const { cues } = parser.parse(cookieSubtitles, "metadata");
-const formatedCues = cues.map((cue) => ({
-  video_id: "Ye8mB6VsUHw",
-  subtitle: cue,
-  difficulty: E_Difficulty.TOO_HARD,
-}));
-
-db.videos.count().then((count) => {
-  if (count === 0) {
-    db.videos.add({
-      video_id: "Ye8mB6VsUHw",
-      name: "Sesame Street: Cookie Monster Sings C is for Cookie",
-      url: "https://www.youtube.com/watch?v=Ye8mB6VsUHw",
-    });
-  }
-});
-
-db.subtitles.count().then((count) => {
-  if (count === 0) {
-    db.subtitles.bulkAdd(formatedCues);
-  }
-});
+// fill db with dummy data
+initDbWithDummyData();
 
 export class DBService {
   constructor() {}
+
+  bulkAddSubtitle = async (subtitles: InsertType<Subtitle, "id">[]) => {
+    return await db.subtitles.bulkAdd(subtitles);
+  };
+
+  addVideo = async (video_id: string, name: string) => {
+    const videoExists = await db.videos.get({ video_id });
+    if (videoExists) throw new Error("Video already exists");
+
+    return await db.videos.add({
+      video_id,
+      name,
+      url: "https://www.youtube.com/watch?v=" + video_id,
+    });
+  };
 
   getVideos = async () => {
     return await db.videos.toArray();
@@ -72,7 +66,7 @@ export class DBService {
     return subtitle.video_id;
   };
 
-  getSubtitles = async (video_id: string) => {
+  getSubtitlesFromVideoId = async (video_id: string) => {
     const subtitles = await db.subtitles
       .where("video_id")
       .equals(video_id)
@@ -82,24 +76,10 @@ export class DBService {
     return subtitles;
   };
 
-  getSubtitlesWithDifficulty = async (
-    video_id: string,
-    difficulty: E_Difficulty
-  ) => {
-    const subtitles = await db.subtitles
-      .where("video_id")
-      .equals(video_id)
-      .and((subtitle) => subtitle.difficulty === difficulty)
-      .toArray();
-
-    console.log("getSubtitlesWithDifficulty", difficulty, subtitles);
-    return subtitles;
-  };
-
-  updateSubtitleDifficulty = async (id: number, difficulty: E_Difficulty) => {
+  updateSubtitle = async (id: number, fsrsCard: Card) => {
     try {
       // @ts-expect-error
-      await db.subtitles.update(id, { difficulty });
+      await db.subtitles.update(id, { fsrsCard });
     } catch (e) {
       console.error(e);
     }
