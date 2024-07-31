@@ -59,6 +59,6 @@ export class FSRSService {
     console.log("updateCardRating", card, rating);
     await this.dbService.updateSubtitle(card.id, card.fsrsCard);
 
-    this.getCardToReview(card.video_id);
+    await this.getCardToReview(card.video_id);
   };
 }

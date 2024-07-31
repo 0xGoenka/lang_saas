@@ -1,6 +1,5 @@
 import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
 import { observable, WritableObservable } from "micro-observables";
-import { E_EVENT } from "../constants/event";
 import { NavigateFunction } from "react-router-dom";
 import { FSRSService } from "./fsrs.service";
 import { Entry } from "@plussub/srt-vtt-parser/dist/types";
@@ -55,7 +54,7 @@ export class PlayerService {
       if (!currentSub) throw Error("Subtitles not ready");
       setTimeout(() => {
         this.player.pauseVideo();
-        E_EVENT.display_subtitle.dispatch();
+        // E_EVENT.display_subtitle.dispatch();
         this.isPlaying.set(false);
         this.isPlayingAgain.set(false);
       }, currentSub.to - currentSub.from);

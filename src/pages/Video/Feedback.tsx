@@ -1,24 +1,21 @@
 import { useObservable } from "micro-observables";
 import { useServices } from "../../services/Services";
 import { TertiaryButton } from "../../components/Button";
-import { useNavigate } from "react-router-dom";
-import { Header } from "../../components/Header";
 import { decode } from "html-entities";
 import { Rating } from "ts-fsrs";
 
 export const Feedback = () => {
-  const { fsrsService } = useServices();
+  const { fsrsService, playerService } = useServices();
   const cardToReview = useObservable(fsrsService.cardToReview);
   const nativeCardToReview = useObservable(fsrsService.nativeCardToReview);
-  const navigate = useNavigate();
 
   if (!cardToReview) return <div>No card to review</div>;
 
   console.log("Feedback subtitle", cardToReview.subtitle);
 
   return (
-    <div className="relative flex flex-col h-screen justify-between">
-      <Header text="Library" onClick={() => navigate("/")} />
+    <div className="relative flex flex-col h-[30vh] justify-between">
+      {/* <Header text="Library" onClick={() => navigate("/")} /> */}
       <div>
         <div className="text-white text-center">
           {decode(cardToReview.subtitle.text)}
@@ -34,7 +31,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Again);
-                  navigate("/video/" + cardToReview.video_id);
+                  playerService.playVideoAt();
                 }}
               >
                 Too hard
@@ -47,7 +44,6 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Hard);
-                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Hard
@@ -60,7 +56,6 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Good);
-                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Ok
@@ -71,7 +66,6 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Easy);
-                  navigate("/video/" + cardToReview.video_id);
                 }}
               >
                 Easy

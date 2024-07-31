@@ -4,11 +4,14 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { E_EVENT } from "../../constants/event";
 import { Header } from "../../components/Header";
+import { Feedback } from "./Feedback";
+import { useObservable } from "micro-observables";
 
 export const Video = () => {
   const { playerService, dbService } = useServices();
   const navigate = useNavigate();
   const { video_id } = useParams();
+  const isPlaying = useObservable(playerService.isPlaying);
 
   console.log("video_id", video_id);
 
@@ -54,6 +57,7 @@ export const Video = () => {
             iframeClassName="youtube-video"
           />
         </div>
+        {!isPlaying && <Feedback />}
       </div>
       <div className="h-[1px]"></div>
     </div>
