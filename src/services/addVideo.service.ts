@@ -1,3 +1,4 @@
+import { NavigateFunction } from "react-router-dom";
 import { DBService } from "./db.service";
 import { Entry } from "@plussub/srt-vtt-parser/dist/types";
 import { observable } from "micro-observables";
@@ -64,17 +65,6 @@ export class AddVideoService {
 
   setVideoUrl = async (url: string) => {
     this.videoUrl.set(url);
-    try {
-      const id = await getYouTubeID(url);
-      if (!id) {
-        toast.error("Video url look invalid");
-        return;
-      }
-    } catch (error) {
-      console.log("error", error);
-      toast.error("Video url look invalid");
-      return;
-    }
   };
 
   validateYoutubeUrl = async () => {
@@ -83,7 +73,6 @@ export class AddVideoService {
     try {
       const id = await getYouTubeID(url);
       if (!id) {
-        toast.error("Video url look invalid");
         throw new Error("Video url look invalid");
       }
     } catch (error) {
@@ -117,7 +106,7 @@ export class AddVideoService {
     }
   };
 
-  addVideoToLibrary = async () => {
+  addVideoToLibrary = async (navigate: NavigateFunction) => {
     await this.validateSubtitles();
     await this.validateVideoName();
     await this.validateYoutubeUrl();
@@ -143,6 +132,8 @@ export class AddVideoService {
       this.videoUrl.set("");
       this.subtitles.set([]);
       this.native_subtitles.set([]);
+      navigate("/");
+      toast.success("Video added to library");
     } catch (error) {
       console.log("error", error);
       toast.error("Error adding video to library");

@@ -75,9 +75,7 @@ export const AddVideo = () => {
           </div>
           <PrimaryButton
             onClick={() => {
-              addVideoService.addVideoToLibrary();
-              toast.success("Video added to library");
-              navigate("/");
+              addVideoService.addVideoToLibrary(navigate);
             }}
           >
             Add
