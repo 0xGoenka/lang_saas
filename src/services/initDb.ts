@@ -37,10 +37,6 @@ export const initDbWithDummyData = async () => {
   }));
 
   db.videos.count().then((count) => {
-    if (count === 1) {
-      db.delete();
-    }
-
     if (count === 0) {
       db.videos.add({
         video_id: "zpcI_g_zrpk",
