@@ -39,13 +39,15 @@ export const Library = () => {
 export const LibVideo = ({ video }: { video: Video }) => {
   console.log("video.video_id", video.video_id);
   const navigate = useNavigate();
-  // const easy_subtitles = useLiveQuery(() =>
-  //   db.subtitles
-  //     .where("video_id")
-  //     .equals(video.video_id)
-  //     .and((subtitle) => subtitle.difficulty === E_Difficulty.EASY)
-  //     .toArray()
-  // );
+  const learned_subtitles = useLiveQuery(() =>
+    db.subtitles
+      .where("video_id")
+      .equals(video.video_id)
+      .and((subtitle) => subtitle.fsrsCard.due > new Date())
+      .toArray()
+  );
+
+  console.log("learned_subtitles", learned_subtitles?.length);
 
   const count = useLiveQuery(() =>
     db.subtitles.where("video_id").equals(video.video_id).count()
@@ -53,21 +55,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
 
   if (!count) return null;
 
-  const progress = ((1 + 1) / count) * 100;
-
-  // console.log(
-  //   "progress",
-  //   progress,
-  //   "videoId",
-  //   video.video_id,
-  //   "count",
-  //   count,
-  //   "easy_subtitles",
-  //   easy_subtitles.length,
-  //   easy_subtitles?.length + 1,
-  //   ((easy_subtitles?.length + 1) / count) * 100,
-  //   Math.round(progress).toString()
-  // );
+  const progress = ((learned_subtitles?.length + 1) / count) * 100;
 
   return (
     <div
@@ -88,7 +76,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
             id={video.video_id}
           />
           <div className="ml-[14px] text-xs text-grey font-bold">
-            {1 + 1} out of {count} mastered
+            {learned_subtitles?.length} out of {count} mastered
           </div>
         </div>
       </div>
