@@ -20,7 +20,10 @@ export const Video = () => {
     };
   }, [navigate]);
 
-  if (!video_id) navigate("/");
+  if (!video_id) {
+    navigate("/");
+    return null;
+  }
 
   return (
     <div className="relative flex flex-col h-screen justify-between">

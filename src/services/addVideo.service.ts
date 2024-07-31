@@ -7,6 +7,7 @@ import getYouTubeID from "get-youtube-id";
 
 export class AddVideoService {
   subtitles = observable<Entry[]>([]);
+  native_subtitles = observable<Entry[]>([]);
   videoName = observable("");
   videoUrl = observable("");
   dbService: DBService;
@@ -27,6 +28,27 @@ export class AddVideoService {
         const { entries } = parse(text);
         console.log({ entries });
         this.subtitles.set(entries);
+      } catch (error) {
+        console.log("error", error);
+        toast.error("File look invalid");
+        return;
+      }
+    };
+    reader.readAsText(files[0]);
+  };
+
+  setNativeSubtitles = async (files: Blob[]) => {
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const text = e.target?.result;
+      try {
+        if (!text || typeof text !== "string") {
+          toast.error("File look invalid");
+          return;
+        }
+        const { entries } = parse(text);
+        console.log({ entries });
+        this.native_subtitles.set(entries);
       } catch (error) {
         console.log("error", error);
         toast.error("File look invalid");
@@ -87,10 +109,19 @@ export class AddVideoService {
     }
   };
 
+  validateNativeSubtitles = async () => {
+    const subtitles = this.native_subtitles.get();
+    if (!subtitles || subtitles.length < 1) {
+      toast.error("Native subtitles look invalid");
+      throw new Error("Native subtitles look invalid");
+    }
+  };
+
   addVideoToLibrary = async () => {
     await this.validateSubtitles();
     await this.validateVideoName();
     await this.validateYoutubeUrl();
+    await this.validateNativeSubtitles();
 
     const videoId = getYouTubeID(this.videoUrl.get());
 
@@ -105,11 +136,13 @@ export class AddVideoService {
       await this.dbService.addVideoToLibrary(
         videoId,
         this.videoName.get(),
-        this.subtitles.get()
+        this.subtitles.get(),
+        this.native_subtitles.get()
       );
       this.videoName.set("");
       this.videoUrl.set("");
       this.subtitles.set([]);
+      this.native_subtitles.set([]);
     } catch (error) {
       console.log("error", error);
       toast.error("Error adding video to library");

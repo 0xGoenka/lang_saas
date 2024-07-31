@@ -9,6 +9,7 @@ import { Rating } from "ts-fsrs";
 export const Feedback = () => {
   const { fsrsService } = useServices();
   const cardToReview = useObservable(fsrsService.cardToReview);
+  const nativeCardToReview = useObservable(fsrsService.nativeCardToReview);
   const navigate = useNavigate();
 
   if (!cardToReview) return <div>No card to review</div>;
@@ -18,8 +19,13 @@ export const Feedback = () => {
   return (
     <div className="relative flex flex-col h-screen justify-between">
       <Header text="Library" onClick={() => navigate("/")} />
-      <div className="text-white text-center">
-        {decode(cardToReview.subtitle.text)}
+      <div>
+        <div className="text-white text-center">
+          {decode(cardToReview.subtitle.text)}
+        </div>
+        <div className="text-grey text-center text-xs">
+          {decode(nativeCardToReview?.subtitle.text)}
+        </div>
       </div>
       <div className="justify-center items-center flex mb-[50px]">
         <div className="justify-evenly">

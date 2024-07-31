@@ -1,10 +1,11 @@
-import { DBService, Subtitle } from "./db.service";
+import { DBService, NativeSubtitle, Subtitle } from "./db.service";
 import { observable } from "micro-observables";
 import { fsrs, Rating } from "ts-fsrs";
 
 export class FSRSService {
   fsrs = fsrs();
   cardToReview = observable<null | Subtitle>(null);
+  nativeCardToReview = observable<null | NativeSubtitle>(null);
 
   dbService: DBService;
 
@@ -30,6 +31,14 @@ export class FSRSService {
     if (cardsToReview.length === 0) throw Error("No cards to review");
 
     this.cardToReview.set(cardsToReview[0]);
+    const native_sub = await this.dbService.getMatchingNativeSubtitle(
+      cardsToReview[0],
+      videoId
+    );
+
+    if (!native_sub) throw Error("No native subtitle to review");
+
+    this.nativeCardToReview.set(native_sub[0]);
 
     console.log("Filtered Cards");
     console.table(
@@ -38,7 +47,7 @@ export class FSRSService {
         fsrsCard: card.fsrsCard.due.toLocaleString(),
       }))
     );
-    return cardsToReview[0];
+    return { card: cardsToReview[0], native_sub };
   };
 
   updateCardRating = async (card: Subtitle, rating: Rating) => {

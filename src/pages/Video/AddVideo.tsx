@@ -20,6 +20,13 @@ export const AddVideo = () => {
     addVideoService.setSubtitles(event.target.files);
   };
 
+  const changeHandlerNative = (event: ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-expect-error
+    addVideoService.setNativeSubtitles(event.target.files);
+  };
+
   return (
     <div>
       <Header text="Library" onClick={() => navigate("/")} />
@@ -42,10 +49,17 @@ export const AddVideo = () => {
             className="text-dark px-4 py-1 w-full my-[16px] border-2 border-lightGrey rounded-md"
             placeholder="Video title"
           />
-          <label>Srt file</label>
+          <label>foreign subtitle .srt file</label>
           <input
             type="file"
             onChange={changeHandler}
+            className="text-dark px-4 py-1 w-full my-[16px] border-2 border-lightGrey rounded-md"
+            placeholder="youtube url"
+          />
+          <label>Native subtitle .srt file</label>
+          <input
+            type="file"
+            onChange={changeHandlerNative}
             className="text-dark px-4 py-1 w-full my-[16px] border-2 border-lightGrey rounded-md"
             placeholder="youtube url"
           />
