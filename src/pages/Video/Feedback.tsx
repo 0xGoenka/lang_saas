@@ -44,6 +44,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Hard);
+                  playerService.playVideoAt();
                 }}
               >
                 Hard
@@ -56,6 +57,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Good);
+                  playerService.playVideoAt();
                 }}
               >
                 Ok
@@ -66,6 +68,7 @@ export const Feedback = () => {
               <TertiaryButton
                 onClick={() => {
                   fsrsService.updateCardRating(cardToReview, Rating.Easy);
+                  playerService.playVideoAt();
                 }}
               >
                 Easy

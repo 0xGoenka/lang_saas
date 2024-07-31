@@ -81,6 +81,7 @@ export const AddVideo = () => {
           </PrimaryButton>
           <a
             className="text-center text-lightGrey underline w-full m-auto items-center flex justify-center mt-4"
+            target="_blank"
             href="https://www.loom.com/share/394e8e0dbcfe4d3c89eac8570e344baa?sid=e25226f6-af95-4aeb-8cd3-350c3c6477d4"
           >
             Cliquez ici pour visionner le tutoriel pour ajouter une vidéo
