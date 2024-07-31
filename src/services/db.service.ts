@@ -99,4 +99,13 @@ export class DBService {
       console.error(e);
     }
   };
+
+  removeVideoFromLibrary = async (video_id: string) => {
+    try {
+      await db.videos.where("video_id").equals(video_id).delete();
+      await db.subtitles.where("video_id").equals(video_id).delete();
+    } catch (e) {
+      console.error(e);
+    }
+  };
 }

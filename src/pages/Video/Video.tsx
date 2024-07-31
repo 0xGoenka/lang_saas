@@ -6,7 +6,7 @@ import { E_EVENT } from "../../constants/event";
 import { Header } from "../../components/Header";
 
 export const Video = () => {
-  const { playerService } = useServices();
+  const { playerService, dbService } = useServices();
   const navigate = useNavigate();
   const { video_id } = useParams();
 
@@ -24,7 +24,21 @@ export const Video = () => {
 
   return (
     <div className="relative flex flex-col h-screen justify-between">
-      <Header text="Library" onClick={() => navigate("/")} />
+      <Header
+        text="Library"
+        onClick={() => navigate("/")}
+        right={
+          <button
+            className="ml-[8px] bg-transparent border border-grey text-white px-[8px] rounded-md"
+            onClick={() => {
+              dbService.removeVideoFromLibrary(video_id);
+              navigate("/");
+            }}
+          >
+            remove
+          </button>
+        }
+      />
       <div className="relative justify-center content-center">
         <div className="mb-[16px]">
           {/* <div className="youtube-video z-10000 border-2 bg-transparent absolute h-[360px]"></div> */}

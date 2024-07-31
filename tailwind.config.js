@@ -14,6 +14,7 @@ export default {
       start: "#4094D1",
       middle: "#7278DF",
       end: "#78BCE7",
+      red: "#F64A4A",
     },
     text: {
       base: "16px",

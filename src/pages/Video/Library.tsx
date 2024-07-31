@@ -11,7 +11,7 @@ export const Library = () => {
 
   console.log("videos", videos);
   return (
-    <div className="max-h-screen flex-col flex">
+    <div className="h-screen flex-col flex">
       <div className="mt-[24px] mb-[40px] text-lightGrey text-3xl font-bold">
         Video library
       </div>
