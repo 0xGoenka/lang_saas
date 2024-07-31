@@ -55,7 +55,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
 
   if (!count) return null;
 
-  const progress = ((learned_subtitles?.length + 1) / count) * 100;
+  const progress = ((learned_subtitles?.length ?? 1) / count) * 100;
 
   return (
     <div
@@ -76,7 +76,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
             id={video.video_id}
           />
           <div className="ml-[14px] text-xs text-grey font-bold">
-            {learned_subtitles?.length} out of {count} mastered
+            {learned_subtitles?.length ?? 1} out of {count} mastered
           </div>
         </div>
       </div>
