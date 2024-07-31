@@ -1,4 +1,4 @@
-import { Card } from "ts-fsrs";
+import { Card, createEmptyCard } from "ts-fsrs";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import Dexie, { InsertType, type EntityTable } from "dexie";
 import { Entry } from "@plussub/srt-vtt-parser/dist/types";
@@ -45,15 +45,31 @@ export class DBService {
     return await db.subtitles.bulkAdd(subtitles);
   };
 
-  addVideo = async (video_id: string, name: string) => {
+  addVideoToLibrary = async (
+    video_id: string,
+    name: string,
+    subtitles: Entry[]
+  ) => {
     const videoExists = await db.videos.get({ video_id });
     if (videoExists) throw new Error("Video already exists");
 
-    return await db.videos.add({
-      video_id,
-      name,
-      url: "https://www.youtube.com/watch?v=" + video_id,
-    });
+    try {
+      await db.videos.add({
+        video_id,
+        name,
+        url: "https://www.youtube.com/watch?v=" + video_id,
+      });
+
+      const formatedSub = subtitles.map((sub) => ({
+        video_id,
+        subtitle: sub,
+        fsrsCard: createEmptyCard(new Date()),
+      }));
+
+      await db.subtitles.bulkAdd(formatedSub);
+    } catch {
+      throw new Error("Error adding video to library");
+    }
   };
 
   getVideos = async () => {

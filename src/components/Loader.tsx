@@ -1,8 +1,12 @@
 import "./Loader.css";
 
 export const Loader = ({ progress, id }: { progress: string; id: string }) => {
-  const r = document.querySelector("." + id) as HTMLElement;
-  if (r) r.style.setProperty("--progress", progress);
+  try {
+    const r = document.querySelector(".videoid_" + id) as HTMLElement;
+    if (r) r.style.setProperty("--progress", progress);
+  } catch (error) {
+    console.log("error", error);
+  }
 
   return (
     <svg

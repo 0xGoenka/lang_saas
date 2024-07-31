@@ -1,35 +1,33 @@
 import { useLiveQuery } from "dexie-react-hooks";
-// import { PrimaryButton } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Loader } from "../../components/Loader";
 import { db, Video } from "../../services/db.service";
 import { useNavigate } from "react-router-dom";
+import { PrimaryButton } from "../../components/Button";
 
 export const Library = () => {
   const videos = useLiveQuery(() => db.videos.toArray());
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   console.log("videos", videos);
   return (
-    <div className="h-screen flex-col flex">
-      <div className="flex-1 flex flex-col">
-        <div className="mt-[24px] mb-[40px] text-lightGrey text-3xl font-bold">
-          Video library
-        </div>
-        <div className="flex-1 overflow-y-auto">
-          {videos?.map((video) => (
-            <LibVideo key={video.id} video={video} />
-          ))}
-        </div>
+    <div className="max-h-screen flex-col flex">
+      <div className="mt-[24px] mb-[40px] text-lightGrey text-3xl font-bold">
+        Video library
+      </div>
+      <div className="overflow-y-auto flex-1 flex flex-col">
+        {videos?.map((video) => (
+          <LibVideo key={video.id} video={video} />
+        ))}
       </div>
       <div>
-        {/* <PrimaryButton
+        <PrimaryButton
           onClick={() => {
             navigate("/add_video");
           }}
         >
           Add a video
-        </PrimaryButton> */}
+        </PrimaryButton>
         <Footer />
       </div>
     </div>
@@ -53,7 +51,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
     db.subtitles.where("video_id").equals(video.video_id).count()
   );
 
-  if (!count) return null;
+  if (!count || !learned_subtitles) return null;
 
   const progress = ((learned_subtitles?.length ?? 1) / count) * 100;
 
@@ -70,7 +68,7 @@ export const LibVideo = ({ video }: { video: Video }) => {
       </div>
       <div className="flex-1 flex flex-col justify-between">
         <div className="font-bold text-xs leading-[15px]">{video.name}</div>
-        <div className={`items-end flex ${video.video_id}`}>
+        <div className={`items-end flex videoid_${video.video_id}`}>
           <Loader
             progress={Math.round(progress).toString()}
             id={video.video_id}
