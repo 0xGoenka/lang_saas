@@ -92,7 +92,7 @@ export const AddVideo = () => {
             target="_blank"
             href="https://downsub.com/"
           >
-            Cliquez ici pour acceder a downsub.com
+            Cliquez ici pour acceder à downsub.com
           </a>
         </div>
       </div>
