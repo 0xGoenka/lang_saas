@@ -60,7 +60,7 @@ export const Feedback = () => {
           </SecondaryButton>
         </div>
         <PrimaryButton onClick={() => setShow(true)}>
-          Show Answer (S)
+          Show Answer (W)
         </PrimaryButton>
       </>
     );
