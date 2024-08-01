@@ -86,6 +86,14 @@ export const AddVideo = () => {
           >
             Cliquez ici pour visionner le tutoriel pour ajouter une vidéo
           </a>
+
+          <a
+            className="text-center text-grey underline w-full m-auto items-center flex justify-center mt-4"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=qtcgvKa1jPg"
+          >
+            Cliquez ici pour acceder a downsub.com
+          </a>
         </div>
       </div>
     </div>
