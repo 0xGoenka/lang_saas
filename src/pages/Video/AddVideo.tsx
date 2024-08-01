@@ -90,7 +90,7 @@ export const AddVideo = () => {
           <a
             className="text-center text-grey underline w-full m-auto items-center flex justify-center mt-4"
             target="_blank"
-            href="https://www.youtube.com/watch?v=qtcgvKa1jPg"
+            href="https://downsub.com/"
           >
             Cliquez ici pour acceder a downsub.com
           </a>
