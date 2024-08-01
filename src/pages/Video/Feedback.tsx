@@ -24,7 +24,7 @@ export const Feedback = () => {
           {decode(nativeCardToReview?.subtitle.text)}
         </div>
       </div>
-      <div className="justify-center items-center flex mb-[50px]">
+      <div className="justify-center items-center flex mb-[50px] mt-8">
         <div className="justify-evenly">
           <div className="m-[4px] mb-[8px]">
             <span className="m-[4px]">
@@ -35,9 +35,9 @@ export const Feedback = () => {
                 }}
               >
                 Too hard
-                <div className="mr-[8px] text-xs font-medium	">
+                {/* <div className="mr-[8px] text-xs font-medium	">
                   Will reappear in 5mn
-                </div>
+                </div> */}
               </TertiaryButton>
             </span>
             <span className="m-[4px]">
@@ -48,7 +48,7 @@ export const Feedback = () => {
                 }}
               >
                 Hard
-                <div className="text-xs font-medium	">Will reappear in 10mn</div>
+                {/* <div className="text-xs font-medium	">Will reappear in 10mn</div> */}
               </TertiaryButton>
             </span>
           </div>
@@ -61,7 +61,7 @@ export const Feedback = () => {
                 }}
               >
                 Ok
-                <div className="text-xs font-medium	">Will reappear in 1H</div>
+                {/* <div className="text-xs font-medium	">Will reappear in 1H</div> */}
               </TertiaryButton>
             </span>
             <span className="m-[4px]">
@@ -72,7 +72,7 @@ export const Feedback = () => {
                 }}
               >
                 Easy
-                <div className="text-xs font-medium	">Won’t reappear</div>
+                {/* <div className="text-xs font-medium	">Won’t reappear</div> */}
               </TertiaryButton>
             </span>
           </div>

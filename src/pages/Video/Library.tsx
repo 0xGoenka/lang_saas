@@ -1,5 +1,4 @@
 import { useLiveQuery } from "dexie-react-hooks";
-import { Footer } from "../../components/Footer";
 import { Loader } from "../../components/Loader";
 import { db, Video } from "../../services/db.service";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +19,7 @@ export const Library = () => {
           <LibVideo key={video.id} video={video} />
         ))}
       </div>
-      <div>
+      <div className="mb-8">
         <PrimaryButton
           onClick={() => {
             navigate("/add_video");
@@ -28,7 +27,7 @@ export const Library = () => {
         >
           Add a video
         </PrimaryButton>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
@@ -67,7 +66,9 @@ export const LibVideo = ({ video }: { video: Video }) => {
         />
       </div>
       <div className="flex-1 flex flex-col justify-between">
-        <div className="font-bold text-xs leading-[15px]">{video.name}</div>
+        <div className="font-bold text-xs leading-[15px] md:text-base">
+          {video.name}
+        </div>
         <div className={`items-end flex videoid_${video.video_id}`}>
           <Loader
             progress={Math.round(progress).toString()}

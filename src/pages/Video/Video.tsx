@@ -70,5 +70,6 @@ const opts = {
     // controls: 0, // dont show control
     disablekb: 1, // disable keyboard
     iv_load_policy: 3, // disable annotations
+    rel: 0,
   },
 };
