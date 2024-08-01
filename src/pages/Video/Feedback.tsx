@@ -15,16 +15,23 @@ export const Feedback = () => {
   const cardToReview = useObservable(fsrsService.cardToReview);
   const nativeCardToReview = useObservable(fsrsService.nativeCardToReview);
   const [show, setShow] = useState(false);
-  useHotkeys("A", () => playerService.playVideoAt(), [show]);
-  useHotkeys("S", () => setShow(true), [show]);
-  useHotkeys("D", () => again(), []);
-  useHotkeys("W", () => ok(), []);
-  useHotkeys("E", () => easy(), []);
-  useHotkeys("R", () => hard(), []);
+  useHotkeys("A", () => playerService.playVideoAt(), []);
+  useHotkeys("W", () => setShow(true), [show]);
+
+  useHotkeys("Q", () => again(), []);
+  useHotkeys("S", () => hard(), []);
+  useHotkeys("D", () => ok(), []);
+  useHotkeys("F", () => easy(), []);
 
   const again = () => {
     if (!cardToReview) return;
     fsrsService.updateCardRating(cardToReview, Rating.Again);
+    playerService.playVideoAt();
+  };
+
+  const hard = () => {
+    if (!cardToReview) return;
+    fsrsService.updateCardRating(cardToReview, Rating.Hard);
     playerService.playVideoAt();
   };
 
@@ -37,12 +44,6 @@ export const Feedback = () => {
   const easy = () => {
     if (!cardToReview) return;
     fsrsService.updateCardRating(cardToReview, Rating.Easy);
-    playerService.playVideoAt();
-  };
-
-  const hard = () => {
-    if (!cardToReview) return;
-    fsrsService.updateCardRating(cardToReview, Rating.Hard);
     playerService.playVideoAt();
   };
 
@@ -76,43 +77,39 @@ export const Feedback = () => {
         </div>
       </div>
       <div className="justify-center items-center flex mb-[50px] mt-8">
-        <div className="justify-evenly">
-          <div className="m-[4px] mb-[8px]">
-            <span className="m-[4px]">
-              <TertiaryButton onClick={again}>
-                Too hard (D)
-                {/* <div className="mr-[8px] text-xs font-medium	">
+        <div className="justify-evenly flex md:flex-row flex-wrap">
+          <div className="m-[4px]">
+            <TertiaryButton onClick={again}>
+              Too hard (Q)
+              {/* <div className="mr-[8px] text-xs font-medium	">
                   Will reappear in 5mn
                 </div> */}
-              </TertiaryButton>
-            </span>
-            <span className="m-[4px]">
-              <TertiaryButton onClick={hard}>
-                Hard (R)
-                {/* <div className="text-xs font-medium	">Will reappear in 10mn</div> */}
-              </TertiaryButton>
-            </span>
+            </TertiaryButton>
           </div>
           <div className="m-[4px]">
-            <span className="m-[4px]">
-              <TertiaryButton onClick={ok}>
-                Ok (W)
-                {/* <div className="text-xs font-medium	">Will reappear in 1H</div> */}
-              </TertiaryButton>
-            </span>
-            <span className="m-[4px]">
-              <TertiaryButton onClick={easy}>
-                Easy (E)
-                {/* <div className="text-xs font-medium	">Won’t reappear</div> */}
-              </TertiaryButton>
-            </span>
+            <TertiaryButton onClick={hard}>
+              Hard (S)
+              {/* <div className="text-xs font-medium	">Will reappear in 10mn</div> */}
+            </TertiaryButton>
+          </div>
+          <div className="m-[4px]">
+            <TertiaryButton onClick={ok}>
+              Ok (D)
+              {/* <div className="text-xs font-medium	">Will reappear in 1H</div> */}
+            </TertiaryButton>
+          </div>
+          <div className="m-[4px]">
+            <TertiaryButton onClick={easy}>
+              Easy (F)
+              {/* <div className="text-xs font-medium	">Won’t reappear</div> */}
+            </TertiaryButton>
           </div>
         </div>
       </div>
     </div>
   );
 };
-// useHotkeys("D", () => again(), []);
-// useHotkeys("R", () => hard(), []);
-// useHotkeys("W", () => ok(), []);
-// useHotkeys("E", () => easy(), []);
+// useHotkeys("Q", () => again(), []);
+// useHotkeys("S", () => hard(), []);
+// useHotkeys("D", () => ok(), []);
+// useHotkeys("F", () => easy(), []);
