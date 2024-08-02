@@ -18,10 +18,10 @@ export const Feedback = () => {
   useHotkeys("A", () => playerService.playVideoAt(), []);
   useHotkeys("W", () => setShow(true), [show]);
 
-  useHotkeys("Q", () => again(), []);
-  useHotkeys("S", () => hard(), []);
-  useHotkeys("D", () => ok(), []);
-  useHotkeys("F", () => easy(), []);
+  useHotkeys("Q", () => easy(), []);
+  useHotkeys("S", () => ok(), []);
+  useHotkeys("D", () => hard(), []);
+  useHotkeys("F", () => again(), []);
 
   const again = () => {
     if (!cardToReview) return;
@@ -79,29 +79,29 @@ export const Feedback = () => {
       <div className="justify-center items-center flex mb-[50px] mt-8">
         <div className="justify-evenly flex md:flex-row flex-wrap">
           <div className="m-[4px]">
-            <TertiaryButton onClick={again}>
-              Too hard (Q)
-              {/* <div className="mr-[8px] text-xs font-medium	">
-                  Will reappear in 5mn
-                </div> */}
-            </TertiaryButton>
-          </div>
-          <div className="m-[4px]">
-            <TertiaryButton onClick={hard}>
-              Hard (S)
-              {/* <div className="text-xs font-medium	">Will reappear in 10mn</div> */}
+            <TertiaryButton onClick={easy}>
+              Easy (Q)
+              {/* <div className="text-xs font-medium	">Won’t reappear</div> */}
             </TertiaryButton>
           </div>
           <div className="m-[4px]">
             <TertiaryButton onClick={ok}>
-              Ok (D)
+              Ok (S)
               {/* <div className="text-xs font-medium	">Will reappear in 1H</div> */}
             </TertiaryButton>
           </div>
           <div className="m-[4px]">
-            <TertiaryButton onClick={easy}>
-              Easy (F)
-              {/* <div className="text-xs font-medium	">Won’t reappear</div> */}
+            <TertiaryButton onClick={hard}>
+              Hard (D)
+              {/* <div className="text-xs font-medium	">Will reappear in 10mn</div> */}
+            </TertiaryButton>
+          </div>
+          <div className="m-[4px]">
+            <TertiaryButton onClick={again}>
+              Too hard (F)
+              {/* <div className="mr-[8px] text-xs font-medium	">
+                  Will reappear in 5mn
+                </div> */}
             </TertiaryButton>
           </div>
         </div>

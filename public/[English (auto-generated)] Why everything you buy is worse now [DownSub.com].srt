@@ -1,0 +1,868 @@
+1
+00:00:00,120 --> 00:00:01,560
+so have you all noticed that everything
+
+2
+00:00:01,560 --> 00:00:03,240
+kind of sucks now and I don't mean like
+
+3
+00:00:03,240 --> 00:00:04,620
+the general state of the world I mean
+
+4
+00:00:04,620 --> 00:00:07,020
+like the stuff we buy is just like a
+
+5
+00:00:07,020 --> 00:00:08,820
+little bit worse than it was 10 years
+
+6
+00:00:08,820 --> 00:00:10,740
+ago and I really started thinking about
+
+7
+00:00:10,740 --> 00:00:12,540
+this because my co-worker Izzy wrote
+
+8
+00:00:12,540 --> 00:00:14,580
+about how she had to replace a bra so
+
+9
+00:00:14,580 --> 00:00:16,440
+I'm gonna do it any normal person would
+
+10
+00:00:16,440 --> 00:00:18,660
+do which is by the exact same thing from
+
+11
+00:00:18,660 --> 00:00:20,760
+the exact same place and then after a
+
+12
+00:00:20,760 --> 00:00:22,740
+few weeks it just kind of just kind of
+
+13
+00:00:22,740 --> 00:00:25,680
+fell apart so this kind of started me on
+
+14
+00:00:25,680 --> 00:00:27,960
+like this journey of like okay I'm
+
+15
+00:00:27,960 --> 00:00:29,699
+hearing anecdotally from like so many
+
+16
+00:00:29,699 --> 00:00:31,560
+people that I talk to like in my life
+
+17
+00:00:31,560 --> 00:00:34,739
+from coffee machines phones computers
+
+18
+00:00:34,739 --> 00:00:37,980
+sweaters they all tear or break or like
+
+19
+00:00:37,980 --> 00:00:40,860
+explode way sooner than they used to so
+
+20
+00:00:40,860 --> 00:00:42,660
+what's going on and is there a way to
+
+21
+00:00:42,660 --> 00:00:44,399
+climb out from under this pile of
+
+22
+00:00:44,399 --> 00:00:46,340
+consumer trash
+
+23
+00:00:46,340 --> 00:00:49,100
+foreign
+
+24
+00:00:49,100 --> 00:00:51,360
+so let's talk about this in the most
+
+25
+00:00:51,360 --> 00:00:52,980
+basic of terms starting with the design
+
+26
+00:00:52,980 --> 00:00:55,199
+process when a company wants to make a
+
+27
+00:00:55,199 --> 00:00:58,079
+thing let's say like a jacket there are
+
+28
+00:00:58,079 --> 00:00:59,600
+three main factors to consider
+
+29
+00:00:59,600 --> 00:01:02,699
+functionality does it work appearance
+
+30
+00:01:02,699 --> 00:01:05,880
+does it look good and manufacturability
+
+31
+00:01:05,880 --> 00:01:08,520
+is it easy and fairly inexpensive to
+
+32
+00:01:08,520 --> 00:01:10,200
+make a lot of this product
+
+33
+00:01:10,200 --> 00:01:12,420
+generally a good product will have a
+
+34
+00:01:12,420 --> 00:01:14,939
+good blend of these three things but in
+
+35
+00:01:14,939 --> 00:01:16,439
+recent years this process has been
+
+36
+00:01:16,439 --> 00:01:18,360
+thrown off balance let's look at clothes
+
+37
+00:01:18,360 --> 00:01:21,180
+for example in the past if you needed a
+
+38
+00:01:21,180 --> 00:01:22,860
+new jacket you used to go to a tailor
+
+39
+00:01:22,860 --> 00:01:25,200
+get measured choose a material and have
+
+40
+00:01:25,200 --> 00:01:27,240
+it made then for decades instead of
+
+41
+00:01:27,240 --> 00:01:28,860
+going to a tailor for a jacket we went
+
+42
+00:01:28,860 --> 00:01:30,420
+to department stores and bought things
+
+43
+00:01:30,420 --> 00:01:32,820
+that were mass produced by the 80s and
+
+44
+00:01:32,820 --> 00:01:35,280
+90s we had tons of options in stores to
+
+45
+00:01:35,280 --> 00:01:38,100
+choose from and now many of us just kind
+
+46
+00:01:38,100 --> 00:01:40,979
+of go online click add to cart and buy a
+
+47
+00:01:40,979 --> 00:01:44,159
+product without ever seeing it in person
+
+48
+00:01:44,159 --> 00:01:46,740
+but it's not just how we buy it's how
+
+49
+00:01:46,740 --> 00:01:49,500
+often we buy and for that we can kind of
+
+50
+00:01:49,500 --> 00:01:50,820
+blame this man
+
+51
+00:01:50,820 --> 00:01:53,220
+Ernest Elmo yeah incredible name in the
+
+52
+00:01:53,220 --> 00:01:55,560
+1930s during the Great Depression he
+
+53
+00:01:55,560 --> 00:01:57,600
+wrote this paper that was like okay like
+
+54
+00:01:57,600 --> 00:01:58,619
+the government should really like
+
+55
+00:01:58,619 --> 00:02:01,740
+support this idea of plan obsolescence
+
+56
+00:02:01,740 --> 00:02:03,540
+except he didn't call it planned
+
+57
+00:02:03,540 --> 00:02:05,640
+obsolescence he called it consumer
+
+58
+00:02:05,640 --> 00:02:07,740
+engineering remember that jacket you
+
+59
+00:02:07,740 --> 00:02:09,239
+bought well it's a new season and it's
+
+60
+00:02:09,239 --> 00:02:11,459
+out of style buttons are out zippers are
+
+61
+00:02:11,459 --> 00:02:13,739
+in so you buy something new but not
+
+62
+00:02:13,739 --> 00:02:15,180
+because there was anything physically
+
+63
+00:02:15,180 --> 00:02:17,099
+wrong with the original that's why it's
+
+64
+00:02:17,099 --> 00:02:18,780
+called consumer engineering right like
+
+65
+00:02:18,780 --> 00:02:20,760
+it was it's up here in the brain and
+
+66
+00:02:20,760 --> 00:02:22,140
+we've been living this way for decades
+
+67
+00:02:22,140 --> 00:02:23,879
+so now we all want the next best thing
+
+68
+00:02:23,879 --> 00:02:26,700
+all the time and that demand has spun
+
+69
+00:02:26,700 --> 00:02:27,920
+out of control
+
+70
+00:02:27,920 --> 00:02:31,920
+today we are surrounding the speed of
+
+71
+00:02:31,920 --> 00:02:33,300
+certain Trend cycles and the fact that
+
+72
+00:02:33,300 --> 00:02:34,739
+they're geared towards like these micro
+
+73
+00:02:34,739 --> 00:02:37,319
+communities like Stanley Cups when like
+
+74
+00:02:37,319 --> 00:02:39,120
+maybe a year ago it was like Hydro
+
+75
+00:02:39,120 --> 00:02:43,080
+flasks the result is that we buy a lot a
+
+76
+00:02:43,080 --> 00:02:44,879
+survey done in 2021 and found that
+
+77
+00:02:44,879 --> 00:02:47,220
+nearly 40 percent of UK consumers buy
+
+78
+00:02:47,220 --> 00:02:50,099
+clothing as often as once a month the UN
+
+79
+00:02:50,099 --> 00:02:52,319
+reports that between the year 2000 and
+
+80
+00:02:52,319 --> 00:02:54,900
+2014 the average person was buying 60
+
+81
+00:02:54,900 --> 00:02:57,599
+more clothing and each item was only
+
+82
+00:02:57,599 --> 00:03:00,840
+kept half as long so we want to buy a
+
+83
+00:03:00,840 --> 00:03:02,580
+lot of stuff fast and because we replace
+
+84
+00:03:02,580 --> 00:03:04,860
+our stuff so often we don't really want
+
+85
+00:03:04,860 --> 00:03:07,140
+to spend a lot of money on it which has
+
+86
+00:03:07,140 --> 00:03:09,540
+an effect too people aren't willing to
+
+87
+00:03:09,540 --> 00:03:11,220
+pay more for something they have
+
+88
+00:03:11,220 --> 00:03:13,800
+purchased a while ago so like if I paid
+
+89
+00:03:13,800 --> 00:03:17,280
+30 bucks for a bra 10 years ago it would
+
+90
+00:03:17,280 --> 00:03:19,019
+be really hard for me to buy it at fifty
+
+91
+00:03:19,019 --> 00:03:21,239
+dollars even though in the last 10 years
+
+92
+00:03:21,239 --> 00:03:23,640
+labor costs have risen so what we're
+
+93
+00:03:23,640 --> 00:03:25,379
+left with is an incredibly fast cycle of
+
+94
+00:03:25,379 --> 00:03:27,420
+demand for low-cost products and here's
+
+95
+00:03:27,420 --> 00:03:29,459
+what that looks like in order to speed
+
+96
+00:03:29,459 --> 00:03:31,140
+up manufacturing companies have to
+
+97
+00:03:31,140 --> 00:03:33,120
+either hire more people alter how the
+
+98
+00:03:33,120 --> 00:03:35,280
+product is made or both but they also
+
+99
+00:03:35,280 --> 00:03:36,780
+have to keep prices low enough for
+
+100
+00:03:36,780 --> 00:03:39,420
+consumers to keep buying so they may
+
+101
+00:03:39,420 --> 00:03:41,760
+start swapping materials like cotton or
+
+102
+00:03:41,760 --> 00:03:44,940
+silk for a cheaper synthetic material or
+
+103
+00:03:44,940 --> 00:03:46,739
+rely on a more basic stitching pattern
+
+104
+00:03:46,739 --> 00:03:48,959
+that maybe just doesn't hold as well
+
+105
+00:03:48,959 --> 00:03:51,420
+so if after 10 years you're still paying
+
+106
+00:03:51,420 --> 00:03:53,519
+the same price or close to the same
+
+107
+00:03:53,519 --> 00:03:55,920
+price for a product that looks the same
+
+108
+00:03:55,920 --> 00:03:59,400
+well something had to change
+
+109
+00:03:59,400 --> 00:04:02,159
+so you might say okay Kim fashion trends
+
+110
+00:04:02,159 --> 00:04:04,260
+are moving too fast and we buy too much
+
+111
+00:04:04,260 --> 00:04:06,180
+stuff I get it I get it but why does my
+
+112
+00:04:06,180 --> 00:04:08,819
+washing machine suck and that's a great
+
+113
+00:04:08,819 --> 00:04:12,599
+question let's talk about technology
+
+114
+00:04:12,599 --> 00:04:14,580
+when things like computers first became
+
+115
+00:04:14,580 --> 00:04:16,320
+part of our daily lives it made a lot of
+
+116
+00:04:16,320 --> 00:04:18,660
+sense to upgrade devices pretty often it
+
+117
+00:04:18,660 --> 00:04:20,579
+was actually very big differences in
+
+118
+00:04:20,579 --> 00:04:22,740
+what a device did that's two years old
+
+119
+00:04:22,740 --> 00:04:24,900
+versus one that was brand new in the
+
+120
+00:04:24,900 --> 00:04:27,060
+market there was just big leaps this is
+
+121
+00:04:27,060 --> 00:04:28,560
+gay Gordon Byrne she directs the
+
+122
+00:04:28,560 --> 00:04:30,000
+consumer advocacy group called The
+
+123
+00:04:30,000 --> 00:04:31,860
+repair Association you know if you had a
+
+124
+00:04:31,860 --> 00:04:33,840
+two-year-old thing you probably couldn't
+
+125
+00:04:33,840 --> 00:04:36,180
+do half the cool stuff that the other
+
+126
+00:04:36,180 --> 00:04:38,759
+guy could do so that kind of fueled the
+
+127
+00:04:38,759 --> 00:04:41,100
+replacement cycle because you really did
+
+128
+00:04:41,100 --> 00:04:43,680
+get something better in terms of
+
+129
+00:04:43,680 --> 00:04:45,720
+functionality for example when the
+
+130
+00:04:45,720 --> 00:04:47,639
+iPhone was first made it was a major
+
+131
+00:04:47,639 --> 00:04:50,160
+breakthrough subsequent phones up to a
+
+132
+00:04:50,160 --> 00:04:51,840
+point responded to Major technological
+
+133
+00:04:51,840 --> 00:04:53,520
+leaps like look at the difference
+
+134
+00:04:53,520 --> 00:04:56,100
+between the 3Gs and the four the iPhone
+
+135
+00:04:56,100 --> 00:04:58,380
+4 had a way better resolution and a
+
+136
+00:04:58,380 --> 00:05:00,000
+front-facing camera
+
+137
+00:05:00,000 --> 00:05:02,460
+for a while these major leaps between
+
+138
+00:05:02,460 --> 00:05:05,100
+models was the norm for technology but
+
+139
+00:05:05,100 --> 00:05:07,740
+we're not making those giant changes as
+
+140
+00:05:07,740 --> 00:05:10,860
+often anymore instead partly to make us
+
+141
+00:05:10,860 --> 00:05:12,660
+want to buy more things companies make
+
+142
+00:05:12,660 --> 00:05:14,540
+very minor adjustments year after year
+
+143
+00:05:14,540 --> 00:05:17,520
+so the drier you own may now play a fun
+
+144
+00:05:17,520 --> 00:05:18,840
+little song at the end of a cycle
+
+145
+00:05:18,840 --> 00:05:21,120
+instead of screaming and now as devices
+
+146
+00:05:21,120 --> 00:05:22,740
+Advanced and got increasingly
+
+147
+00:05:22,740 --> 00:05:24,360
+complicated there was another problem
+
+148
+00:05:24,360 --> 00:05:26,340
+for consumers all these things started
+
+149
+00:05:26,340 --> 00:05:28,500
+to come into the into the world they
+
+150
+00:05:28,500 --> 00:05:30,840
+didn't come in with repair tools they
+
+151
+00:05:30,840 --> 00:05:33,600
+came in to be thrown away basically when
+
+152
+00:05:33,600 --> 00:05:35,280
+this stuff breaks it's often
+
+153
+00:05:35,280 --> 00:05:37,139
+intentionally impossible to repair
+
+154
+00:05:37,139 --> 00:05:39,180
+because if you buy something that has a
+
+155
+00:05:39,180 --> 00:05:40,800
+computer chip in it or a circuit board
+
+156
+00:05:40,800 --> 00:05:43,740
+or whatever you probably can't make one
+
+157
+00:05:43,740 --> 00:05:46,740
+in your garage so you're very you're
+
+158
+00:05:46,740 --> 00:05:48,720
+very reliant on what the manufacturer
+
+159
+00:05:48,720 --> 00:05:51,120
+will agree to sell and very often they
+
+160
+00:05:51,120 --> 00:05:53,039
+don't agree to sell parts and tools and
+
+161
+00:05:53,039 --> 00:05:55,139
+Diagnostics or even give you a diagram
+
+162
+00:05:55,139 --> 00:05:57,300
+but sometimes it really just isn't
+
+163
+00:05:57,300 --> 00:05:59,580
+possible to fix because they cut Corners
+
+164
+00:05:59,580 --> 00:06:02,160
+just like in fashion replacing metal and
+
+165
+00:06:02,160 --> 00:06:04,620
+screws with plastic and glue and these
+
+166
+00:06:04,620 --> 00:06:06,780
+kind of issues apply across the board in
+
+167
+00:06:06,780 --> 00:06:09,539
+technology from your phone to toasters
+
+168
+00:06:09,539 --> 00:06:12,720
+to blenders to electric wheelchairs to
+
+169
+00:06:12,720 --> 00:06:15,060
+your car if you walk around your your
+
+170
+00:06:15,060 --> 00:06:16,680
+house or your apartment and you start
+
+171
+00:06:16,680 --> 00:06:18,960
+cataloging how many things you own that
+
+172
+00:06:18,960 --> 00:06:20,520
+have chips in them I think you'd be
+
+173
+00:06:20,520 --> 00:06:22,440
+really surprised how big
+
+174
+00:06:22,440 --> 00:06:25,100
+that lack of repair problem actually is
+
+175
+00:06:25,100 --> 00:06:27,840
+I want people to feel hopeful yes this
+
+176
+00:06:27,840 --> 00:06:29,280
+is something that's like out of our
+
+177
+00:06:29,280 --> 00:06:31,080
+control in some ways and not out of our
+
+178
+00:06:31,080 --> 00:06:32,520
+control in others I don't want you to
+
+179
+00:06:32,520 --> 00:06:35,460
+feel guilty for like partaking in in
+
+180
+00:06:35,460 --> 00:06:37,139
+this system when like so many people
+
+181
+00:06:37,139 --> 00:06:39,300
+even kind of brought up culturally to
+
+182
+00:06:39,300 --> 00:06:41,220
+think in this way or to buy in this way
+
+183
+00:06:41,220 --> 00:06:43,199
+compared to other things that suck in
+
+184
+00:06:43,199 --> 00:06:44,639
+the world we actually have a surprising
+
+185
+00:06:44,639 --> 00:06:46,139
+amount of control over this situation
+
+186
+00:06:46,139 --> 00:06:48,660
+with tech fighting for the Rachel repair
+
+187
+00:06:48,660 --> 00:06:51,660
+is actually extremely effective New York
+
+188
+00:06:51,660 --> 00:06:53,699
+State just passed away to repair bill in
+
+189
+00:06:53,699 --> 00:06:56,100
+2022 and it's not perfect but at least
+
+190
+00:06:56,100 --> 00:06:58,380
+it's something with fashion stay away
+
+191
+00:06:58,380 --> 00:07:00,300
+from micro Trends and fast fashion as
+
+192
+00:07:00,300 --> 00:07:02,639
+often as you can buy with intention and
+
+193
+00:07:02,639 --> 00:07:04,020
+learn to take care of the things you do
+
+194
+00:07:04,020 --> 00:07:06,900
+have think of like your objects as
+
+195
+00:07:06,900 --> 00:07:08,460
+having maintenance read those care
+
+196
+00:07:08,460 --> 00:07:10,979
+labels as consumers it's gonna take a
+
+197
+00:07:10,979 --> 00:07:12,360
+little bit for us to sift through all
+
+198
+00:07:12,360 --> 00:07:14,340
+the trash and retrain our brains a bit
+
+199
+00:07:14,340 --> 00:07:16,560
+but we can take small steps to take back
+
+200
+00:07:16,560 --> 00:07:19,199
+control of the process after all all of
+
+201
+00:07:19,199 --> 00:07:22,380
+this stuff is supposed to be made for us
+
+202
+00:07:22,380 --> 00:07:25,330
+so let's make it clear what we want
+
+203
+00:07:25,330 --> 00:07:26,580
+[Music]
+
+204
+00:07:26,580 --> 00:07:29,400
+we have a map on our repair.org website
+
+205
+00:07:29,400 --> 00:07:31,800
+where you can go find your state click
+
+206
+00:07:31,800 --> 00:07:34,800
+the picture and it'll bring up a um a
+
+207
+00:07:34,800 --> 00:07:36,660
+basically a letter writing widget you
+
+208
+00:07:36,660 --> 00:07:38,940
+type in your address and it says
+
+209
+00:07:38,940 --> 00:07:41,340
+tell your repair story and if you really
+
+210
+00:07:41,340 --> 00:07:43,139
+want to do something that's how it gets
+
+211
+00:07:43,139 --> 00:07:45,419
+done we've had over a hundred thousand
+
+212
+00:07:45,419 --> 00:07:48,060
+people do that over 30 000 of them in
+
+213
+00:07:48,060 --> 00:07:50,099
+New York so it does not surprise me that
+
+214
+00:07:50,099 --> 00:07:51,419
+New York was the first one to actually
+
+215
+00:07:51,419 --> 00:07:52,680
+pass law
+
+216
+00:07:52,680 --> 00:07:54,720
+because that's where there was a really
+
+217
+00:07:54,720 --> 00:07:57,979
+big ground swell of Interest
+

@@ -1,37 +1,40 @@
 import { createEmptyCard } from "ts-fsrs";
 import { db } from "./db.service";
 import { parse } from "@plussub/srt-vtt-parser";
-import { kidCold } from "./../subtitles/kidCold";
-import { london } from "../subtitles/london";
-import { worse } from "../subtitles/worse";
-import { lawnGrass } from "../subtitles/lawnGrass";
+import { kidCold_en, kidCold_fr } from "../subtitles/kidCold";
+import { worse_en, worse_fr } from "../subtitles/worse";
 
 export const initDbWithDummyData = async () => {
-  const { entries: kidColdEntries } = parse(kidCold);
-  const { entries: londonEntries } = parse(london);
-  const { entries: worseEntries } = parse(worse);
-  const { entries: lawnGrassEntries } = parse(lawnGrass);
+  const { entries: kidColdEntries_en } = parse(kidCold_en);
+  const { entries: worseEntries_en } = parse(worse_en);
+  const { entries: kidColdEntries_fr } = parse(kidCold_fr);
+  const { entries: worseEntries_fr } = parse(worse_fr);
 
-  const formatedCuesKidCold = kidColdEntries.map((cue) => ({
+  if (localStorage.getItem("init") === "true") {
+    return;
+  }
+  localStorage.setItem("init", "true");
+
+  const formatedCuesKidCold_en = kidColdEntries_en.map((cue) => ({
     video_id: "zpcI_g_zrpk",
     subtitle: cue,
     fsrsCard: createEmptyCard(new Date()),
   }));
 
-  const formatedCuesLondon = londonEntries.map((cue) => ({
-    video_id: "zFPdxSX_QQE",
+  const formatedCuesKidCold_fr = kidColdEntries_fr.map((cue) => ({
+    video_id: "zpcI_g_zrpk",
     subtitle: cue,
     fsrsCard: createEmptyCard(new Date()),
   }));
 
-  const formatedCuesWorse = worseEntries.map((cue) => ({
+  const formatedCuesWorse_en = worseEntries_en.map((cue) => ({
     video_id: "DHXBacEH0qo",
     subtitle: cue,
     fsrsCard: createEmptyCard(new Date()),
   }));
 
-  const formatedCuesLawnGrass = lawnGrassEntries.map((cue) => ({
-    video_id: "bR5kIPwg6_Q",
+  const formatedCuesWorse_fr = worseEntries_fr.map((cue) => ({
+    video_id: "DHXBacEH0qo",
     subtitle: cue,
     fsrsCard: createEmptyCard(new Date()),
   }));
@@ -40,33 +43,28 @@ export const initDbWithDummyData = async () => {
     if (count === 0) {
       db.videos.add({
         video_id: "zpcI_g_zrpk",
-        name: "Why kids don’t get as cold as adults do",
+        name: "Why kids don’t get as cold as adults do [English-French]",
         url: "https://www.youtube.com/watch?v=zpcI_g_zrpk",
       });
       db.videos.add({
-        video_id: "zFPdxSX_QQE",
-        name: "London, is prone to severe flooding",
-        url: "https://www.youtube.com/watch?v=zFPdxSX_QQE",
-      });
-      db.videos.add({
         video_id: "DHXBacEH0qo",
-        name: "Why everything you buy is worse now",
+        name: "Why everything you buy is worse now [English-French]",
         url: "https://www.youtube.com/watch?v=DHXBacEH0qo",
-      });
-      db.videos.add({
-        video_id: "bR5kIPwg6_Q",
-        name: "Why grass lawns keep you warm",
-        url: "https://www.youtube.com/watch?v=bR5kIPwg6_Q",
       });
     }
   });
 
   db.subtitles.count().then((count) => {
     if (count === 0) {
-      db.subtitles.bulkAdd(formatedCuesKidCold);
-      db.subtitles.bulkAdd(formatedCuesLondon);
-      db.subtitles.bulkAdd(formatedCuesWorse);
-      db.subtitles.bulkAdd(formatedCuesLawnGrass);
+      db.subtitles.bulkAdd(formatedCuesKidCold_en);
+      db.subtitles.bulkAdd(formatedCuesWorse_en);
+    }
+  });
+
+  db.native_subtitles.count().then((count) => {
+    if (count === 0) {
+      db.native_subtitles.bulkAdd(formatedCuesKidCold_fr);
+      db.native_subtitles.bulkAdd(formatedCuesWorse_fr);
     }
   });
 };
