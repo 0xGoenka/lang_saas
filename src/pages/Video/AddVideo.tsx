@@ -82,7 +82,7 @@ export const AddVideo = () => {
           <a
             className="text-center text-lightGrey underline w-full m-auto items-center flex justify-center mt-4"
             target="_blank"
-            href="https://www.youtube.com/watch?v=qtcgvKa1jPg"
+            href="https://www.loom.com/share/ae805dbc342c46ffbfe754d9ac860968?sid=b9ffe36b-cfed-4478-afe7-e8ac8ac15faa"
           >
             Cliquez ici pour visionner le tutoriel pour ajouter une vidéo
           </a>
