@@ -84,7 +84,7 @@ export const AddVideo = () => {
             target="_blank"
             href="https://www.loom.com/share/ae805dbc342c46ffbfe754d9ac860968?sid=b9ffe36b-cfed-4478-afe7-e8ac8ac15faa"
           >
-            Cliquez ici pour visionner le tutoriel pour ajouter une vidéo
+            Click here to access the video tutorial
           </a>
 
           <a
@@ -92,7 +92,7 @@ export const AddVideo = () => {
             target="_blank"
             href="https://downsub.com/"
           >
-            Cliquez ici pour accéder à downsub.com
+            Click here to access downsub.com
           </a>
         </div>
       </div>
